@@ -32,7 +32,7 @@ jobs:
           mkdir -p .input
           curl --fail --location --retry 3 --output .input/roboninon.db https://roboninon.win/db/download
       - name: Generate
-        run: python scripts/generate_master_data.py --upstream .upstream --db .input/roboninon.db --output dist
+        run: python scripts/generate_master_data.py --upstream .upstream --db .input/roboninon.db --output dist --force
       - name: Verify
         run: python -m pytest -q
       - name: Publish changed data

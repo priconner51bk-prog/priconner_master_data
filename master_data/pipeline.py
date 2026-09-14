@@ -115,12 +115,12 @@ def _validate(rows: list[dict], kind: str) -> None:
 
 
 def generate(db_path: Path, output_dir: Path, source_commit: str, now: str | None = None,
-             unit_status_path: Path | None = None) -> str:
+             unit_status_path: Path | None = None, force: bool = False) -> str:
     output_dir.mkdir(parents=True, exist_ok=True)
     meta_path = output_dir / "metadata.json"
     if meta_path.exists():
         old = json.loads(meta_path.read_text(encoding="utf-8"))
-        if old.get("source_commit") == source_commit:
+        if not force and old.get("source_commit") == source_commit:
             return NO_CHANGE
     data = extract(db_path, unit_status_path=unit_status_path)
     metadata = {"schema_version": SCHEMA_VERSION, "source": SOURCE,
@@ -147,11 +147,12 @@ def generate(db_path: Path, output_dir: Path, source_commit: str, now: str | Non
 
 def generate_from_upstream(source_dir: Path, db_path: Path, output_dir: Path,
                            now: str | None = None,
-                           unit_status_path: Path | None = None) -> str:
+                           unit_status_path: Path | None = None,
+                           force: bool = False) -> str:
     """Use upstream checkout identity as the only update gate for generation."""
     revision = read_upstream_revision(source_dir)
     return generate(db_path, output_dir, revision["source_commit"], now=now,
-                    unit_status_path=unit_status_path)
+                    unit_status_path=unit_status_path, force=force)
 
 
 def _atomic_json(path: Path, value: dict) -> None:
