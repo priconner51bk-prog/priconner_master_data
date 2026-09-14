@@ -35,6 +35,25 @@ jobs:
         run: python scripts/generate_master_data.py --upstream .upstream --db .input/roboninon.db --output dist --force
       - name: Verify
         run: python -m pytest -q
+      - name: Sync Google Sheets
+        if: ${{ secrets.APPS_SCRIPT_WEBHOOK_URL != '' && secrets.APPS_SCRIPT_WEBHOOK_TOKEN != '' }}
+        env:
+          APPS_SCRIPT_WEBHOOK_URL: ${{ secrets.APPS_SCRIPT_WEBHOOK_URL }}
+          APPS_SCRIPT_WEBHOOK_TOKEN: ${{ secrets.APPS_SCRIPT_WEBHOOK_TOKEN }}
+        run: |
+          python - <<'PY'
+          import json, os, requests
+          with open('dist/master_data.json', encoding='utf-8') as f:
+              payload = json.load(f)
+          r = requests.post(os.environ['APPS_SCRIPT_WEBHOOK_URL'], json={
+              'token': os.environ['APPS_SCRIPT_WEBHOOK_TOKEN'],
+              'payload': payload,
+          }, timeout=60)
+          r.raise_for_status()
+          result = r.json()
+          if not result.get('ok'):
+              raise RuntimeError(result)
+          print(result)
       - name: Publish changed data
         run: |
           git config user.name "github-actions[bot]"

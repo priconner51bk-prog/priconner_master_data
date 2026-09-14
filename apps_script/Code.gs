@@ -28,6 +28,23 @@ function syncMasterDataFromGitHub() {
   return {path: path, characters: (payload.characters || []).length, clan_battle_bosses: (payload.clan_battle_bosses || []).length};
 }
 
+// GitHub Actions webhook entry point. Deploy this project as a Web app and set
+// WEBHOOK_TOKEN in Script Properties. The token is sent in the JSON body.
+function doPost(e) {
+  var props = PropertiesService.getScriptProperties();
+  var expected = props.getProperty('WEBHOOK_TOKEN');
+  var body = e && e.postData && e.postData.contents ? JSON.parse(e.postData.contents) : {};
+  if (!expected || body.token !== expected) {
+    return ContentService.createTextOutput(JSON.stringify({ok: false, error: 'unauthorized'}))
+      .setMimeType(ContentService.MimeType.JSON);
+  }
+  applyGeneratedMasterData(body.payload || {});
+  return ContentService.createTextOutput(JSON.stringify({ok: true,
+    characters: (body.payload && body.payload.characters || []).length,
+    clan_battle_bosses: (body.payload && body.payload.clan_battle_bosses || []).length}))
+    .setMimeType(ContentService.MimeType.JSON);
+}
+
 // Run once manually to keep the spreadsheet synchronized with GitHub hourly.
 function installMasterDataTrigger() {
   ScriptApp.getProjectTriggers().forEach(function(t) {
