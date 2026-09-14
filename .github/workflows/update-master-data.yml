@@ -36,11 +36,14 @@ jobs:
       - name: Verify
         run: python -m pytest -q
       - name: Sync Google Sheets
-        if: ${{ secrets.APPS_SCRIPT_WEBHOOK_URL != '' && secrets.APPS_SCRIPT_WEBHOOK_TOKEN != '' }}
         env:
           APPS_SCRIPT_WEBHOOK_URL: ${{ secrets.APPS_SCRIPT_WEBHOOK_URL }}
           APPS_SCRIPT_WEBHOOK_TOKEN: ${{ secrets.APPS_SCRIPT_WEBHOOK_TOKEN }}
         run: |
+          if [ -z "$APPS_SCRIPT_WEBHOOK_URL" ] || [ -z "$APPS_SCRIPT_WEBHOOK_TOKEN" ]; then
+            echo "Webhook secrets are not configured; skipping Google Sheets sync."
+            exit 0
+          fi
           python - <<'PY'
           import json, os, requests
           with open('dist/master_data.json', encoding='utf-8') as f:
