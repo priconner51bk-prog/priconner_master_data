@@ -3,7 +3,8 @@ name: Update master data
 on:
   workflow_dispatch:
   schedule:
-    - cron: "17 * * * *"
+    # Daily at 04:17 JST (19:17 UTC), matching the upstream's usual update window.
+    - cron: "17 19 * * *"
 
 permissions:
   contents: write
