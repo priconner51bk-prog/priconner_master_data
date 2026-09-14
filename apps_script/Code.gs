@@ -14,6 +14,28 @@ function syncMasterDataToGitHub() {
   return {path: path, characters: characters.length, clan_battle_bosses: bosses.length};
 }
 
+// Pull generated master data from GitHub and restore missing rows in Sheets.
+// Requires the same GITHUB_REPO, GITHUB_TOKEN, and optional GITHUB_PATH properties.
+function syncMasterDataFromGitHub() {
+  var props = PropertiesService.getScriptProperties(), repo = props.getProperty('GITHUB_REPO'), token = props.getProperty('GITHUB_TOKEN');
+  if (!repo || !token) throw new Error('GITHUB_REPO and GITHUB_TOKEN are required Script Properties');
+  var path = props.getProperty('GITHUB_PATH') || 'dist/master_data.json';
+  var current = github_(repo, path, token, 'GET', null);
+  if (!current || !current.content) throw new Error('GitHub file was not found: ' + path);
+  var json = Utilities.newBlob(Utilities.base64Decode(String(current.content).replace(/\n/g, ''))).getDataAsString('UTF-8');
+  var payload = JSON.parse(json);
+  applyGeneratedMasterData(payload);
+  return {path: path, characters: (payload.characters || []).length, clan_battle_bosses: (payload.clan_battle_bosses || []).length};
+}
+
+// Run once manually to keep the spreadsheet synchronized with GitHub hourly.
+function installMasterDataTrigger() {
+  ScriptApp.getProjectTriggers().forEach(function(t) {
+    if (t.getHandlerFunction() === 'syncMasterDataFromGitHub') ScriptApp.deleteTrigger(t);
+  });
+  ScriptApp.newTrigger('syncMasterDataFromGitHub').timeBased().everyHours(1).create();
+}
+
 // Recovery/update helper: copy sheets are read-only sources; only the name column is written.
 function updateNamesFromCopies() {
   var book = SpreadsheetApp.getActiveSpreadsheet();
