@@ -1,0 +1,8 @@
+.input/
+.upstream/
+.work/actual-output/
+.work/actual-output-v2/
+__pycache__/
+.pytest_cache/
+# Local credentials
+priconnertlmovie2damagelist-1169a012dcd3.json

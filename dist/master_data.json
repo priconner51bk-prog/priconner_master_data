@@ -1,0 +1,2865 @@
+{
+  "characters": [
+    {
+      "aliases": [],
+      "id": 100101,
+      "name": "ヒヨリ",
+      "name_en": "Hiyori"
+    },
+    {
+      "aliases": [],
+      "id": 100201,
+      "name": "ユイ",
+      "name_en": "Yui"
+    },
+    {
+      "aliases": [],
+      "id": 100301,
+      "name": "レイ",
+      "name_en": "Rei"
+    },
+    {
+      "aliases": [],
+      "id": 100401,
+      "name": "ミソギ",
+      "name_en": "Misogi"
+    },
+    {
+      "aliases": [],
+      "id": 100501,
+      "name": "マツリ",
+      "name_en": "Matsuri"
+    },
+    {
+      "aliases": [],
+      "id": 100601,
+      "name": "アカリ",
+      "name_en": "Akari"
+    },
+    {
+      "aliases": [],
+      "id": 100701,
+      "name": "ミヤコ",
+      "name_en": "Miyako"
+    },
+    {
+      "aliases": [],
+      "id": 100801,
+      "name": "ユキ",
+      "name_en": "Yuki"
+    },
+    {
+      "aliases": [],
+      "id": 100901,
+      "name": "アンナ",
+      "name_en": "Anna"
+    },
+    {
+      "aliases": [],
+      "id": 101001,
+      "name": "マホ",
+      "name_en": "Maho"
+    },
+    {
+      "aliases": [],
+      "id": 101101,
+      "name": "リノ",
+      "name_en": "Rino"
+    },
+    {
+      "aliases": [],
+      "id": 101201,
+      "name": "ハツネ",
+      "name_en": "Hatsune"
+    },
+    {
+      "aliases": [],
+      "id": 101301,
+      "name": "ナナカ",
+      "name_en": "Nanaka"
+    },
+    {
+      "aliases": [],
+      "id": 101401,
+      "name": "カスミ",
+      "name_en": "Kasumi"
+    },
+    {
+      "aliases": [],
+      "id": 101501,
+      "name": "ミサト",
+      "name_en": "Misato"
+    },
+    {
+      "aliases": [],
+      "id": 101601,
+      "name": "スズナ",
+      "name_en": "Suzuna"
+    },
+    {
+      "aliases": [],
+      "id": 101701,
+      "name": "カオリ",
+      "name_en": "Kaori"
+    },
+    {
+      "aliases": [],
+      "id": 101801,
+      "name": "イオ",
+      "name_en": "Io"
+    },
+    {
+      "aliases": [],
+      "id": 102001,
+      "name": "ミミ",
+      "name_en": "Mimi"
+    },
+    {
+      "aliases": [],
+      "id": 102101,
+      "name": "クルミ",
+      "name_en": "Kurumi"
+    },
+    {
+      "aliases": [],
+      "id": 102201,
+      "name": "ヨリ",
+      "name_en": "Yori"
+    },
+    {
+      "aliases": [],
+      "id": 102301,
+      "name": "アヤネ",
+      "name_en": "Ayane"
+    },
+    {
+      "aliases": [],
+      "id": 102501,
+      "name": "スズメ",
+      "name_en": "Suzume"
+    },
+    {
+      "aliases": [],
+      "id": 102601,
+      "name": "リン",
+      "name_en": "Rin"
+    },
+    {
+      "aliases": [],
+      "id": 102701,
+      "name": "エリコ",
+      "name_en": "Eriko"
+    },
+    {
+      "aliases": [],
+      "id": 102801,
+      "name": "サレン",
+      "name_en": "Saren"
+    },
+    {
+      "aliases": [],
+      "id": 102901,
+      "name": "ノゾミ",
+      "name_en": "Nozomi"
+    },
+    {
+      "aliases": [],
+      "id": 103001,
+      "name": "ニノン",
+      "name_en": "Ninon"
+    },
+    {
+      "aliases": [],
+      "id": 103101,
+      "name": "シノブ",
+      "name_en": "Shinobu"
+    },
+    {
+      "aliases": [],
+      "id": 103201,
+      "name": "アキノ",
+      "name_en": "Akino"
+    },
+    {
+      "aliases": [],
+      "id": 103301,
+      "name": "マヒル",
+      "name_en": "Mahiru"
+    },
+    {
+      "aliases": [],
+      "id": 103401,
+      "name": "ユカリ",
+      "name_en": "Yukari"
+    },
+    {
+      "aliases": [],
+      "id": 103601,
+      "name": "キョウカ",
+      "name_en": "Kyouka"
+    },
+    {
+      "aliases": [],
+      "id": 103701,
+      "name": "トモ",
+      "name_en": "Tomo"
+    },
+    {
+      "aliases": [],
+      "id": 103801,
+      "name": "シオリ",
+      "name_en": "Shiori"
+    },
+    {
+      "aliases": [],
+      "id": 104001,
+      "name": "アオイ",
+      "name_en": "Aoi"
+    },
+    {
+      "aliases": [],
+      "id": 104201,
+      "name": "チカ",
+      "name_en": "Chika"
+    },
+    {
+      "aliases": [],
+      "id": 104301,
+      "name": "マコト",
+      "name_en": "Makoto"
+    },
+    {
+      "aliases": [],
+      "id": 104401,
+      "name": "イリヤ",
+      "name_en": "Illya"
+    },
+    {
+      "aliases": [],
+      "id": 104501,
+      "name": "クウカ",
+      "name_en": "Kuuka"
+    },
+    {
+      "aliases": [],
+      "id": 104601,
+      "name": "タマキ",
+      "name_en": "Tamaki"
+    },
+    {
+      "aliases": [],
+      "id": 104701,
+      "name": "ジュン",
+      "name_en": "Jun"
+    },
+    {
+      "aliases": [],
+      "id": 104801,
+      "name": "ミフユ",
+      "name_en": "Mifuyu"
+    },
+    {
+      "aliases": [],
+      "id": 104901,
+      "name": "シズル",
+      "name_en": "Shizuru"
+    },
+    {
+      "aliases": [],
+      "id": 105001,
+      "name": "ミサキ",
+      "name_en": "Misaki"
+    },
+    {
+      "aliases": [],
+      "id": 105101,
+      "name": "ミツキ",
+      "name_en": "Mitsuki"
+    },
+    {
+      "aliases": [],
+      "id": 105201,
+      "name": "リマ",
+      "name_en": "Lima"
+    },
+    {
+      "aliases": [],
+      "id": 105301,
+      "name": "モニカ",
+      "name_en": "Monika"
+    },
+    {
+      "aliases": [],
+      "id": 105401,
+      "name": "ツムギ",
+      "name_en": "Tsumugi"
+    },
+    {
+      "aliases": [],
+      "id": 105501,
+      "name": "アユミ",
+      "name_en": "Ayumi"
+    },
+    {
+      "aliases": [],
+      "id": 105601,
+      "name": "ルカ",
+      "name_en": "Ruka"
+    },
+    {
+      "aliases": [],
+      "id": 105701,
+      "name": "ジータ",
+      "name_en": "Djeeta"
+    },
+    {
+      "aliases": [],
+      "id": 105801,
+      "name": "ペコリーヌ",
+      "name_en": "Pecorine"
+    },
+    {
+      "aliases": [],
+      "id": 105901,
+      "name": "コッコロ",
+      "name_en": "Kokkoro"
+    },
+    {
+      "aliases": [],
+      "id": 106001,
+      "name": "キャル",
+      "name_en": "Kyaru"
+    },
+    {
+      "aliases": [],
+      "id": 106101,
+      "name": "ムイミ",
+      "name_en": "Muimi"
+    },
+    {
+      "aliases": [],
+      "id": 106301,
+      "name": "アリサ",
+      "name_en": "Arisa"
+    },
+    {
+      "aliases": [],
+      "id": 106401,
+      "name": "シェフィ",
+      "name_en": "Sheffy"
+    },
+    {
+      "aliases": [],
+      "id": 106501,
+      "name": "カヤ",
+      "name_en": "Kaya"
+    },
+    {
+      "aliases": [],
+      "id": 106601,
+      "name": "イノリ",
+      "name_en": "Inori"
+    },
+    {
+      "aliases": [],
+      "id": 106701,
+      "name": "ホマレ",
+      "name_en": "Homare"
+    },
+    {
+      "aliases": [],
+      "id": 106801,
+      "name": "ラビリスタ",
+      "name_en": "Labyrista"
+    },
+    {
+      "aliases": [],
+      "id": 106901,
+      "name": "カイザーインサイト",
+      "name_en": "Kaiser Insight"
+    },
+    {
+      "aliases": [],
+      "id": 107001,
+      "name": "ネネカ",
+      "name_en": "Neneka"
+    },
+    {
+      "aliases": [],
+      "id": 107101,
+      "name": "クリスティーナ",
+      "name_en": "Christina"
+    },
+    {
+      "aliases": [
+        "ペコリーヌ"
+      ],
+      "id": 107501,
+      "name": "ペコリーヌ（サマー）",
+      "name_en": "Pecorine (Summer)"
+    },
+    {
+      "aliases": [
+        "コッコロ"
+      ],
+      "id": 107601,
+      "name": "コッコロ（サマー）",
+      "name_en": "Kokkoro (Summer)"
+    },
+    {
+      "aliases": [
+        "スズメ"
+      ],
+      "id": 107701,
+      "name": "スズメ（サマー）",
+      "name_en": "Suzume (Summer)"
+    },
+    {
+      "aliases": [
+        "キャル"
+      ],
+      "id": 107801,
+      "name": "キャル（サマー）",
+      "name_en": "Kyaru (Summer)"
+    },
+    {
+      "aliases": [
+        "タマキ"
+      ],
+      "id": 107901,
+      "name": "タマキ（サマー）",
+      "name_en": "Tamaki (Summer)"
+    },
+    {
+      "aliases": [
+        "ミフユ"
+      ],
+      "id": 108001,
+      "name": "ミフユ（サマー）",
+      "name_en": "Mifuyu (Summer)"
+    },
+    {
+      "aliases": [
+        "シノブ"
+      ],
+      "id": 108101,
+      "name": "シノブ（ハロウィン）",
+      "name_en": "Shinobu (Halloween)"
+    },
+    {
+      "aliases": [
+        "ミヤコ"
+      ],
+      "id": 108201,
+      "name": "ミヤコ（ハロウィン）",
+      "name_en": "Miyako (Halloween)"
+    },
+    {
+      "aliases": [
+        "ミサキ"
+      ],
+      "id": 108301,
+      "name": "ミサキ（ハロウィン）",
+      "name_en": "Misaki (Halloween)"
+    },
+    {
+      "aliases": [
+        "チカ"
+      ],
+      "id": 108401,
+      "name": "チカ（クリスマス）",
+      "name_en": "Chika (Christmas)"
+    },
+    {
+      "aliases": [
+        "クルミ"
+      ],
+      "id": 108501,
+      "name": "クルミ（クリスマス）",
+      "name_en": "Kurumi (Christmas)"
+    },
+    {
+      "aliases": [
+        "アヤネ"
+      ],
+      "id": 108601,
+      "name": "アヤネ（クリスマス）",
+      "name_en": "Ayane (Christmas)"
+    },
+    {
+      "aliases": [
+        "ヒヨリ"
+      ],
+      "id": 108701,
+      "name": "ヒヨリ（ニューイヤー）",
+      "name_en": "Hiyori (New Year)"
+    },
+    {
+      "aliases": [
+        "ユイ"
+      ],
+      "id": 108801,
+      "name": "ユイ（ニューイヤー）",
+      "name_en": "Yui (New Year)"
+    },
+    {
+      "aliases": [
+        "レイ"
+      ],
+      "id": 108901,
+      "name": "レイ（ニューイヤー）",
+      "name_en": "Rei (New Year)"
+    },
+    {
+      "aliases": [
+        "エリコ"
+      ],
+      "id": 109001,
+      "name": "エリコ（バレンタイン）",
+      "name_en": "Eriko (Valentine)"
+    },
+    {
+      "aliases": [
+        "シズル"
+      ],
+      "id": 109101,
+      "name": "シズル（バレンタイン）",
+      "name_en": "Shizuru (Valentine)"
+    },
+    {
+      "aliases": [],
+      "id": 109201,
+      "name": "アン",
+      "name_en": "Anne"
+    },
+    {
+      "aliases": [],
+      "id": 109301,
+      "name": "ルゥ",
+      "name_en": "Lou"
+    },
+    {
+      "aliases": [],
+      "id": 109401,
+      "name": "グレア",
+      "name_en": "Grea"
+    },
+    {
+      "aliases": [
+        "クウカ"
+      ],
+      "id": 109501,
+      "name": "クウカ（オーエド）",
+      "name_en": "Kuuka (Ooedo)"
+    },
+    {
+      "aliases": [
+        "ニノン"
+      ],
+      "id": 109601,
+      "name": "ニノン（オーエド）",
+      "name_en": "Ninon (Ooedo)"
+    },
+    {
+      "aliases": [],
+      "id": 109701,
+      "name": "レム",
+      "name_en": "Rem"
+    },
+    {
+      "aliases": [],
+      "id": 109801,
+      "name": "ラム",
+      "name_en": "Ram"
+    },
+    {
+      "aliases": [],
+      "id": 109901,
+      "name": "エミリア",
+      "name_en": "Emilia"
+    },
+    {
+      "aliases": [
+        "スズナ"
+      ],
+      "id": 110001,
+      "name": "スズナ（サマー）",
+      "name_en": "Suzuna (Summer)"
+    },
+    {
+      "aliases": [
+        "イオ"
+      ],
+      "id": 110101,
+      "name": "イオ（サマー）",
+      "name_en": "Io (Summer)"
+    },
+    {
+      "aliases": [
+        "ミサキ"
+      ],
+      "id": 110201,
+      "name": "ミサキ（サマー）",
+      "name_en": "Misaki (Summer)"
+    },
+    {
+      "aliases": [
+        "サレン"
+      ],
+      "id": 110301,
+      "name": "サレン（サマー）",
+      "name_en": "Saren (Summer)"
+    },
+    {
+      "aliases": [
+        "マコト"
+      ],
+      "id": 110401,
+      "name": "マコト（サマー）",
+      "name_en": "Makoto (Summer)"
+    },
+    {
+      "aliases": [
+        "カオリ"
+      ],
+      "id": 110501,
+      "name": "カオリ（サマー）",
+      "name_en": "Kaori (Summer)"
+    },
+    {
+      "aliases": [
+        "マホ"
+      ],
+      "id": 110601,
+      "name": "マホ（サマー）",
+      "name_en": "Maho (Summer)"
+    },
+    {
+      "aliases": [
+        "アオイ"
+      ],
+      "id": 110701,
+      "name": "アオイ（編入生）",
+      "name_en": "Aoi (Student)"
+    },
+    {
+      "aliases": [],
+      "id": 110801,
+      "name": "クロエ",
+      "name_en": "Chloe"
+    },
+    {
+      "aliases": [],
+      "id": 110901,
+      "name": "チエル",
+      "name_en": "Chieru"
+    },
+    {
+      "aliases": [],
+      "id": 111001,
+      "name": "ユニ",
+      "name_en": "Yuni"
+    },
+    {
+      "aliases": [
+        "キョウカ"
+      ],
+      "id": 111101,
+      "name": "キョウカ（ハロウィン）",
+      "name_en": "Kyouka (Halloween)"
+    },
+    {
+      "aliases": [
+        "ミソギ"
+      ],
+      "id": 111201,
+      "name": "ミソギ（ハロウィン）",
+      "name_en": "Misogi (Halloween)"
+    },
+    {
+      "aliases": [
+        "ミミ"
+      ],
+      "id": 111301,
+      "name": "ミミ（ハロウィン）",
+      "name_en": "Mimi (Halloween)"
+    },
+    {
+      "aliases": [],
+      "id": 111401,
+      "name": "ルナ",
+      "name_en": "Luna"
+    },
+    {
+      "aliases": [
+        "クリスティーナ"
+      ],
+      "id": 111501,
+      "name": "クリスティーナ（クリスマス）",
+      "name_en": "Christina (Christmas)"
+    },
+    {
+      "aliases": [
+        "ノゾミ"
+      ],
+      "id": 111601,
+      "name": "ノゾミ（クリスマス）",
+      "name_en": "Nozomi (Christmas)"
+    },
+    {
+      "aliases": [
+        "イリヤ"
+      ],
+      "id": 111701,
+      "name": "イリヤ（クリスマス）",
+      "name_en": "Illya (Christmas)"
+    },
+    {
+      "aliases": [
+        "ペコリーヌ"
+      ],
+      "id": 111801,
+      "name": "ペコリーヌ（ニューイヤー）",
+      "name_en": "Pecorine (New Year)"
+    },
+    {
+      "aliases": [
+        "コッコロ"
+      ],
+      "id": 111901,
+      "name": "コッコロ（ニューイヤー）",
+      "name_en": "Kokkoro (New Year)"
+    },
+    {
+      "aliases": [
+        "キャル"
+      ],
+      "id": 112001,
+      "name": "キャル（ニューイヤー）",
+      "name_en": "Kyaru (New Year)"
+    },
+    {
+      "aliases": [
+        "スズメ"
+      ],
+      "id": 112101,
+      "name": "スズメ（ニューイヤー）",
+      "name_en": "Suzume (New Year)"
+    },
+    {
+      "aliases": [
+        "カスミ"
+      ],
+      "id": 112201,
+      "name": "カスミ（マジカル）",
+      "name_en": "Kasumi (Magical Girl)"
+    },
+    {
+      "aliases": [
+        "シオリ"
+      ],
+      "id": 112301,
+      "name": "シオリ（マジカル）",
+      "name_en": "Shiori (Magical Girl)"
+    },
+    {
+      "aliases": [
+        "ウヅキ"
+      ],
+      "id": 112401,
+      "name": "ウヅキ（デレマス）",
+      "name_en": "Uzuki (IM@S CG)"
+    },
+    {
+      "aliases": [
+        "リン"
+      ],
+      "id": 112501,
+      "name": "リン（デレマス）",
+      "name_en": "Rin (IM@S CG)"
+    },
+    {
+      "aliases": [
+        "ミオ"
+      ],
+      "id": 112601,
+      "name": "ミオ（デレマス）",
+      "name_en": "Mio (IM@S CG)"
+    },
+    {
+      "aliases": [
+        "リン"
+      ],
+      "id": 112701,
+      "name": "リン（レンジャー）",
+      "name_en": "Rin (Ranger)"
+    },
+    {
+      "aliases": [
+        "マヒル"
+      ],
+      "id": 112801,
+      "name": "マヒル（レンジャー）",
+      "name_en": "Mahiru (Ranger)"
+    },
+    {
+      "aliases": [
+        "リノ"
+      ],
+      "id": 112901,
+      "name": "リノ（ワンダー）",
+      "name_en": "Rino (Wonderland)"
+    },
+    {
+      "aliases": [
+        "アユミ"
+      ],
+      "id": 113001,
+      "name": "アユミ（ワンダー）",
+      "name_en": "Ayumi (Wonderland)"
+    },
+    {
+      "aliases": [
+        "ルカ"
+      ],
+      "id": 113101,
+      "name": "ルカ（サマー）",
+      "name_en": "Ruka (Summer)"
+    },
+    {
+      "aliases": [
+        "アンナ"
+      ],
+      "id": 113201,
+      "name": "アンナ（サマー）",
+      "name_en": "Anna (Summer)"
+    },
+    {
+      "aliases": [
+        "ナナカ"
+      ],
+      "id": 113301,
+      "name": "ナナカ（サマー）",
+      "name_en": "Nanaka (Summer)"
+    },
+    {
+      "aliases": [
+        "ハツネ"
+      ],
+      "id": 113401,
+      "name": "ハツネ（サマー）",
+      "name_en": "Hatsune (Summer)"
+    },
+    {
+      "aliases": [
+        "ミサト"
+      ],
+      "id": 113501,
+      "name": "ミサト（サマー）",
+      "name_en": "Misato (Summer)"
+    },
+    {
+      "aliases": [
+        "ジュン"
+      ],
+      "id": 113601,
+      "name": "ジュン（サマー）",
+      "name_en": "Jun (Summer)"
+    },
+    {
+      "aliases": [
+        "アカリ"
+      ],
+      "id": 113701,
+      "name": "アカリ（エンジェル）",
+      "name_en": "Akari (Angel)"
+    },
+    {
+      "aliases": [
+        "ヨリ"
+      ],
+      "id": 113801,
+      "name": "ヨリ（エンジェル）",
+      "name_en": "Yori (Angel)"
+    },
+    {
+      "aliases": [
+        "ツムギ"
+      ],
+      "id": 113901,
+      "name": "ツムギ（ハロウィン）",
+      "name_en": "Tsumugi (Halloween)"
+    },
+    {
+      "aliases": [
+        "レイ"
+      ],
+      "id": 114001,
+      "name": "レイ（ハロウィン）",
+      "name_en": "Rei (Halloween)"
+    },
+    {
+      "aliases": [
+        "マツリ"
+      ],
+      "id": 114101,
+      "name": "マツリ（ハロウィン）",
+      "name_en": "Matsuri (Halloween)"
+    },
+    {
+      "aliases": [
+        "モニカ"
+      ],
+      "id": 114201,
+      "name": "モニカ（マジカル）",
+      "name_en": "Monika (Magical Girl)"
+    },
+    {
+      "aliases": [
+        "トモ"
+      ],
+      "id": 114301,
+      "name": "トモ（マジカル）",
+      "name_en": "Tomo (Magical Girl)"
+    },
+    {
+      "aliases": [
+        "アキノ"
+      ],
+      "id": 114401,
+      "name": "アキノ（クリスマス）",
+      "name_en": "Akino (Christmas)"
+    },
+    {
+      "aliases": [
+        "サレン"
+      ],
+      "id": 114501,
+      "name": "サレン（クリスマス）",
+      "name_en": "Saren (Christmas)"
+    },
+    {
+      "aliases": [
+        "ユカリ"
+      ],
+      "id": 114601,
+      "name": "ユカリ（クリスマス）",
+      "name_en": "Yukari (Christmas)"
+    },
+    {
+      "aliases": [
+        "ムイミ"
+      ],
+      "id": 114701,
+      "name": "ムイミ（ニューイヤー）",
+      "name_en": "Muimi (New Year)"
+    },
+    {
+      "aliases": [
+        "ネネカ"
+      ],
+      "id": 115001,
+      "name": "ネネカ（ニューイヤー）",
+      "name_en": "Neneka (New Year)"
+    },
+    {
+      "aliases": [
+        "コッコロ"
+      ],
+      "id": 115501,
+      "name": "コッコロ（儀装束）",
+      "name_en": "Kokkoro (Ceremonial)"
+    },
+    {
+      "aliases": [
+        "ユイ"
+      ],
+      "id": 115601,
+      "name": "ユイ（儀装束）",
+      "name_en": "Yui (Ceremonial)"
+    },
+    {
+      "aliases": [
+        "カスミ"
+      ],
+      "id": 115701,
+      "name": "カスミ（サマー）",
+      "name_en": "Kasumi (Summer)"
+    },
+    {
+      "aliases": [
+        "リマ"
+      ],
+      "id": 115801,
+      "name": "リマ（シンデレラ）",
+      "name_en": "Lima (Cinderella)"
+    },
+    {
+      "aliases": [
+        "マコト"
+      ],
+      "id": 115901,
+      "name": "マコト（シンデレラ）",
+      "name_en": "Makoto (Cinderella)"
+    },
+    {
+      "aliases": [
+        "マホ"
+      ],
+      "id": 116001,
+      "name": "マホ（シンデレラ）",
+      "name_en": "Maho (Cinderella)"
+    },
+    {
+      "aliases": [
+        "クロエ"
+      ],
+      "id": 116201,
+      "name": "クロエ（聖学祭）",
+      "name_en": "Chloe (School Festival)"
+    },
+    {
+      "aliases": [
+        "チエル"
+      ],
+      "id": 116301,
+      "name": "チエル（聖学祭）",
+      "name_en": "Chieru (School Festival)"
+    },
+    {
+      "aliases": [
+        "ユニ"
+      ],
+      "id": 116401,
+      "name": "ユニ（聖学祭）",
+      "name_en": "Yuni (School Festival)"
+    },
+    {
+      "aliases": [
+        "イノリ"
+      ],
+      "id": 116501,
+      "name": "イノリ（タイムトラベル）",
+      "name_en": "Inori (Time Traveller)"
+    },
+    {
+      "aliases": [
+        "カヤ"
+      ],
+      "id": 116601,
+      "name": "カヤ（タイムトラベル）",
+      "name_en": "Kaya (Time Traveller)"
+    },
+    {
+      "aliases": [
+        "アオイ"
+      ],
+      "id": 116701,
+      "name": "アオイ（作業服）",
+      "name_en": "Aoi (Work)"
+    },
+    {
+      "aliases": [
+        "タマキ"
+      ],
+      "id": 116801,
+      "name": "タマキ（作業服）",
+      "name_en": "Tamaki (Work)"
+    },
+    {
+      "aliases": [
+        "ミフユ"
+      ],
+      "id": 116901,
+      "name": "ミフユ（作業服）",
+      "name_en": "Mifuyu (Work)"
+    },
+    {
+      "aliases": [
+        "エリコ"
+      ],
+      "id": 117001,
+      "name": "エリコ（サマー）",
+      "name_en": "Eriko (Summer)"
+    },
+    {
+      "aliases": [
+        "シズル"
+      ],
+      "id": 117101,
+      "name": "シズル（サマー）",
+      "name_en": "Shizuru (Summer)"
+    },
+    {
+      "aliases": [
+        "ノゾミ"
+      ],
+      "id": 117201,
+      "name": "ノゾミ（サマー）",
+      "name_en": "Nozomi (Summer)"
+    },
+    {
+      "aliases": [
+        "チカ"
+      ],
+      "id": 117301,
+      "name": "チカ（サマー）",
+      "name_en": "Chika (Summer)"
+    },
+    {
+      "aliases": [
+        "ツムギ"
+      ],
+      "id": 117401,
+      "name": "ツムギ（サマー）",
+      "name_en": "Tsumugi (Summer)"
+    },
+    {
+      "aliases": [
+        "ミツキ"
+      ],
+      "id": 117501,
+      "name": "ミツキ（オーエド）",
+      "name_en": "Mitsuki (Ooedo)"
+    },
+    {
+      "aliases": [
+        "ユキ"
+      ],
+      "id": 117601,
+      "name": "ユキ（オーエド）",
+      "name_en": "Yuki (Ooedo)"
+    },
+    {
+      "aliases": [
+        "カオリ"
+      ],
+      "id": 117701,
+      "name": "カオリ（ハロウィン）",
+      "name_en": "Kaori (Halloween)"
+    },
+    {
+      "aliases": [
+        "ニノン"
+      ],
+      "id": 117801,
+      "name": "ニノン（ハロウィン）",
+      "name_en": "Ninon (Halloween)"
+    },
+    {
+      "aliases": [
+        "スズナ"
+      ],
+      "id": 117901,
+      "name": "スズナ（ハロウィン）",
+      "name_en": "Suzuna (Halloween)"
+    },
+    {
+      "aliases": [],
+      "id": 118001,
+      "name": "クレジッタ",
+      "name_en": "Creditta"
+    },
+    {
+      "aliases": [],
+      "id": 118101,
+      "name": "ランファ",
+      "name_en": "Ranpha"
+    },
+    {
+      "aliases": [],
+      "id": 118201,
+      "name": "ミソラ",
+      "name_en": "Misora"
+    },
+    {
+      "aliases": [
+        "ハツネ"
+      ],
+      "id": 118301,
+      "name": "ハツネ（ハツネ&シオリ）",
+      "name_en": "ハツネ（ハツネ&シオリ）"
+    },
+    {
+      "aliases": [
+        "シオリ"
+      ],
+      "id": 118401,
+      "name": "シオリ（ハツネ&シオリ）",
+      "name_en": "シオリ（ハツネ&シオリ）"
+    },
+    {
+      "aliases": [],
+      "id": 118501,
+      "name": "カリン",
+      "name_en": "Karin"
+    },
+    {
+      "aliases": [],
+      "id": 118601,
+      "name": "ネビア",
+      "name_en": "Nebbia"
+    },
+    {
+      "aliases": [
+        "イオ"
+      ],
+      "id": 119001,
+      "name": "イオ（ノワール）",
+      "name_en": "Io (Noir)"
+    },
+    {
+      "aliases": [
+        "クウカ"
+      ],
+      "id": 119101,
+      "name": "クウカ（ノワール）",
+      "name_en": "Kuuka (Noir)"
+    },
+    {
+      "aliases": [
+        "マヒル"
+      ],
+      "id": 119201,
+      "name": "マヒル（クリスマス）",
+      "name_en": "Mahiru (Christmas)"
+    },
+    {
+      "aliases": [
+        "リノ"
+      ],
+      "id": 119301,
+      "name": "リノ（クリスマス）",
+      "name_en": "Rino (Christmas)"
+    },
+    {
+      "aliases": [],
+      "id": 119401,
+      "name": "ペコリーヌ",
+      "name_en": "Pecorine"
+    },
+    {
+      "aliases": [],
+      "id": 119501,
+      "name": "コッコロ",
+      "name_en": "Kokkoro"
+    },
+    {
+      "aliases": [],
+      "id": 119601,
+      "name": "キャル",
+      "name_en": "Kyaru"
+    },
+    {
+      "aliases": [],
+      "id": 119701,
+      "name": "シェフィ",
+      "name_en": "Sheffy"
+    },
+    {
+      "aliases": [
+        "ミヤコ"
+      ],
+      "id": 119901,
+      "name": "ミヤコ（クリスマス）",
+      "name_en": "Miyako (Christmas)"
+    },
+    {
+      "aliases": [
+        "シズル"
+      ],
+      "id": 120001,
+      "name": "シズル（ノワール）",
+      "name_en": "Shizuru (Noir)"
+    },
+    {
+      "aliases": [
+        "イオ"
+      ],
+      "id": 120101,
+      "name": "イオ（ノワール）",
+      "name_en": "Io (Noir)"
+    },
+    {
+      "aliases": [
+        "クウカ"
+      ],
+      "id": 120201,
+      "name": "クウカ（ノワール）",
+      "name_en": "Kuuka (Noir)"
+    },
+    {
+      "aliases": [
+        "シズル"
+      ],
+      "id": 120301,
+      "name": "シズル（ノワール）",
+      "name_en": "Shizuru (Noir)"
+    },
+    {
+      "aliases": [
+        "ミミ"
+      ],
+      "id": 120401,
+      "name": "ミミ（リトルリリカル）",
+      "name_en": "ミミ（リトルリリカル）"
+    },
+    {
+      "aliases": [
+        "ミソギ"
+      ],
+      "id": 120501,
+      "name": "ミソギ（リトルリリカル）",
+      "name_en": "ミソギ（リトルリリカル）"
+    },
+    {
+      "aliases": [
+        "キョウカ"
+      ],
+      "id": 120601,
+      "name": "キョウカ（リトルリリカル）",
+      "name_en": "キョウカ（リトルリリカル）"
+    },
+    {
+      "aliases": [
+        "シェフィ"
+      ],
+      "id": 120701,
+      "name": "シェフィ（ニューイヤー）",
+      "name_en": "Sheffy (New Year)"
+    },
+    {
+      "aliases": [
+        "ルカ"
+      ],
+      "id": 120801,
+      "name": "ルカ（ニューイヤー）",
+      "name_en": "Ruka (New Year)"
+    },
+    {
+      "aliases": [
+        "イリヤ"
+      ],
+      "id": 120901,
+      "name": "イリヤ（ニューイヤー）",
+      "name_en": "Illya (New Year)"
+    },
+    {
+      "aliases": [
+        "ペコリーヌ"
+      ],
+      "id": 121001,
+      "name": "ペコリーヌ（オーバーロード）",
+      "name_en": "Pecorine (Overload)"
+    },
+    {
+      "aliases": [
+        "キャル"
+      ],
+      "id": 121101,
+      "name": "キャル（オーバーロード）",
+      "name_en": "Kyaru (Overload)"
+    },
+    {
+      "aliases": [
+        "ラビリスタ"
+      ],
+      "id": 121201,
+      "name": "ラビリスタ（オーバーロード）",
+      "name_en": "Labyrista (Overload)"
+    },
+    {
+      "aliases": [
+        "クルミ"
+      ],
+      "id": 121301,
+      "name": "クルミ（ステージ）",
+      "name_en": "Kurumi (Stage)"
+    },
+    {
+      "aliases": [
+        "ミサキ"
+      ],
+      "id": 121401,
+      "name": "ミサキ（ステージ）",
+      "name_en": "Misaki (Stage)"
+    },
+    {
+      "aliases": [
+        "アユミ"
+      ],
+      "id": 121501,
+      "name": "アユミ（怪盗）",
+      "name_en": "Ayumi (Phantom Thief)"
+    },
+    {
+      "aliases": [
+        "イノリ"
+      ],
+      "id": 121601,
+      "name": "イノリ（怪盗）",
+      "name_en": "Inori (Phantom Thief)"
+    },
+    {
+      "aliases": [
+        "アキノ"
+      ],
+      "id": 121701,
+      "name": "アキノ（アキノ＆サレン）",
+      "name_en": "アキノ（アキノ＆サレン）"
+    },
+    {
+      "aliases": [
+        "サレン"
+      ],
+      "id": 121801,
+      "name": "サレン（アキノ＆サレン）",
+      "name_en": "サレン（アキノ＆サレン）"
+    },
+    {
+      "aliases": [
+        "アンナ"
+      ],
+      "id": 121901,
+      "name": "アンナ（パイレーツ）",
+      "name_en": "Anna (Pirate)"
+    },
+    {
+      "aliases": [
+        "シノブ"
+      ],
+      "id": 122001,
+      "name": "シノブ（パイレーツ）",
+      "name_en": "Shinobu (Pirate)"
+    },
+    {
+      "aliases": [
+        "アオイ"
+      ],
+      "id": 122101,
+      "name": "アオイ（キャンプ）",
+      "name_en": "Aoi (Camp)"
+    },
+    {
+      "aliases": [
+        "ユカリ"
+      ],
+      "id": 122201,
+      "name": "ユカリ（キャンプ）",
+      "name_en": "Yukari (Camp)"
+    },
+    {
+      "aliases": [],
+      "id": 122301,
+      "name": "ヴァンピィ",
+      "name_en": "Vampy"
+    },
+    {
+      "aliases": [
+        "ヒヨリ"
+      ],
+      "id": 122401,
+      "name": "ヒヨリ（サマー）",
+      "name_en": "Hiyori (Summer)"
+    },
+    {
+      "aliases": [
+        "レイ"
+      ],
+      "id": 122501,
+      "name": "レイ（サマー）",
+      "name_en": "Rei (Summer)"
+    },
+    {
+      "aliases": [
+        "ユイ"
+      ],
+      "id": 122601,
+      "name": "ユイ（サマー）",
+      "name_en": "Yui (Summer)"
+    },
+    {
+      "aliases": [
+        "キョウカ"
+      ],
+      "id": 122701,
+      "name": "キョウカ（サマー）",
+      "name_en": "Kyouka (Summer)"
+    },
+    {
+      "aliases": [
+        "ミソギ"
+      ],
+      "id": 122801,
+      "name": "ミソギ（サマー）",
+      "name_en": "Misogi (Summer)"
+    },
+    {
+      "aliases": [
+        "ミミ"
+      ],
+      "id": 122901,
+      "name": "ミミ（サマー）",
+      "name_en": "Mimi (Summer)"
+    },
+    {
+      "aliases": [],
+      "id": 123001,
+      "name": "アメス",
+      "name_en": "Ameth"
+    },
+    {
+      "aliases": [
+        "マホ"
+      ],
+      "id": 123101,
+      "name": "マホ（エクスプローラー）",
+      "name_en": "Maho (Explorer)"
+    },
+    {
+      "aliases": [
+        "アヤネ"
+      ],
+      "id": 123201,
+      "name": "アヤネ（エクスプローラー）",
+      "name_en": "Ayane (Explorer)"
+    },
+    {
+      "aliases": [],
+      "id": 123301,
+      "name": "ネア",
+      "name_en": "Nea"
+    },
+    {
+      "aliases": [
+        "ジュン"
+      ],
+      "id": 123401,
+      "name": "ジュン（キャンプ）",
+      "name_en": "Jun (Camp)"
+    },
+    {
+      "aliases": [
+        "リン"
+      ],
+      "id": 123501,
+      "name": "リン（ハロウィン）",
+      "name_en": "Rin (Halloween)"
+    },
+    {
+      "aliases": [
+        "トモ"
+      ],
+      "id": 123601,
+      "name": "トモ（ハロウィン）",
+      "name_en": "Tomo (Halloween)"
+    },
+    {
+      "aliases": [
+        "ナナカ"
+      ],
+      "id": 123701,
+      "name": "ナナカ（ハロウィン）",
+      "name_en": "Nanaka (Halloween)"
+    },
+    {
+      "aliases": [
+        "クリスティーナ"
+      ],
+      "id": 123801,
+      "name": "クリスティーナ（ワイルド）",
+      "name_en": "Christina (Wild)"
+    },
+    {
+      "aliases": [
+        "マツリ"
+      ],
+      "id": 123901,
+      "name": "マツリ（ワイルド）",
+      "name_en": "Matsuri (Wild)"
+    },
+    {
+      "aliases": [
+        "アカリ"
+      ],
+      "id": 124001,
+      "name": "アカリ（クリスマス）",
+      "name_en": "Akari (Christmas)"
+    },
+    {
+      "aliases": [
+        "ヨリ"
+      ],
+      "id": 124101,
+      "name": "ヨリ（クリスマス）",
+      "name_en": "Yori (Christmas)"
+    },
+    {
+      "aliases": [
+        "ジュン"
+      ],
+      "id": 124201,
+      "name": "ジュン（クリスマス）",
+      "name_en": "Jun (Christmas)"
+    },
+    {
+      "aliases": [
+        "アン"
+      ],
+      "id": 124301,
+      "name": "アン（アン＆グレア）",
+      "name_en": "アン（アン＆グレア）"
+    },
+    {
+      "aliases": [
+        "グレア"
+      ],
+      "id": 124401,
+      "name": "グレア（アン＆グレア）",
+      "name_en": "グレア（アン＆グレア）"
+    },
+    {
+      "aliases": [
+        "ホマレ"
+      ],
+      "id": 124501,
+      "name": "ホマレ（ニューイヤー）",
+      "name_en": "Homare (New Year)"
+    },
+    {
+      "aliases": [
+        "ミサト"
+      ],
+      "id": 124601,
+      "name": "ミサト（ニューイヤー）",
+      "name_en": "Misato (New Year)"
+    },
+    {
+      "aliases": [
+        "ミツキ"
+      ],
+      "id": 124701,
+      "name": "ミツキ（ニューイヤー）",
+      "name_en": "Mitsuki (New Year)"
+    },
+    {
+      "aliases": [
+        "ノゾミ"
+      ],
+      "id": 124801,
+      "name": "ノゾミ（リベレイター）",
+      "name_en": "Nozomi (Liberator)"
+    },
+    {
+      "aliases": [
+        "カヤ"
+      ],
+      "id": 124901,
+      "name": "カヤ（リベレイター）",
+      "name_en": "Kaya (Liberator)"
+    },
+    {
+      "aliases": [
+        "ムイミ"
+      ],
+      "id": 125001,
+      "name": "ムイミ（リベレイター）",
+      "name_en": "Muimi (Liberator)"
+    },
+    {
+      "aliases": [
+        "タマキ"
+      ],
+      "id": 125101,
+      "name": "タマキ（カフェ）",
+      "name_en": "Tamaki (Cafe)"
+    },
+    {
+      "aliases": [
+        "モニカ"
+      ],
+      "id": 125201,
+      "name": "モニカ（カフェ）",
+      "name_en": "Monika (Cafe)"
+    },
+    {
+      "aliases": [
+        "コッコロ"
+      ],
+      "id": 125301,
+      "name": "コッコロ（レンジャー）",
+      "name_en": "Kokkoro (Ranger)"
+    },
+    {
+      "aliases": [
+        "シオリ"
+      ],
+      "id": 125401,
+      "name": "シオリ（レンジャー）",
+      "name_en": "Shiori (Ranger)"
+    },
+    {
+      "aliases": [
+        "ジータ"
+      ],
+      "id": 125501,
+      "name": "ジータ（ウォーロック）",
+      "name_en": "Djeeta (Warlock)"
+    },
+    {
+      "aliases": [],
+      "id": 125601,
+      "name": "ビカラ",
+      "name_en": "Vikala"
+    },
+    {
+      "aliases": [
+        "カリン"
+      ],
+      "id": 125701,
+      "name": "カリン（アルケミスト）",
+      "name_en": "Karin (Alchemist)"
+    },
+    {
+      "aliases": [
+        "リリ"
+      ],
+      "id": 125801,
+      "name": "リリ（フォールン）",
+      "name_en": "Riri (Fallen)"
+    },
+    {
+      "aliases": [
+        "カヤ"
+      ],
+      "id": 125901,
+      "name": "カヤ（リベレイター）",
+      "name_en": "Kaya (Liberator)"
+    },
+    {
+      "aliases": [
+        "クリア"
+      ],
+      "id": 126001,
+      "name": "クリア（フォールン）",
+      "name_en": "Qulia (Fallen)"
+    },
+    {
+      "aliases": [
+        "プレシア"
+      ],
+      "id": 126101,
+      "name": "プレシア（フォールン）",
+      "name_en": "Precia (Fallen)"
+    },
+    {
+      "aliases": [
+        "イリヤ"
+      ],
+      "id": 126201,
+      "name": "イリヤ（儀装束）",
+      "name_en": "Illya (Ceremonial)"
+    },
+    {
+      "aliases": [
+        "ユキ"
+      ],
+      "id": 126301,
+      "name": "ユキ（儀装束）",
+      "name_en": "Yuki (Ceremonial)"
+    },
+    {
+      "aliases": [],
+      "id": 126401,
+      "name": "クローチェ",
+      "name_en": "Croce"
+    },
+    {
+      "aliases": [],
+      "id": 126501,
+      "name": "ライラエル",
+      "name_en": "Lyrael"
+    },
+    {
+      "aliases": [
+        "ネネカ"
+      ],
+      "id": 126601,
+      "name": "ネネカ（サマー）",
+      "name_en": "Neneka (Summer)"
+    },
+    {
+      "aliases": [
+        "アキノ"
+      ],
+      "id": 126701,
+      "name": "アキノ（サマー）",
+      "name_en": "Akino (Summer)"
+    },
+    {
+      "aliases": [
+        "ユカリ"
+      ],
+      "id": 126801,
+      "name": "ユカリ（サマー）",
+      "name_en": "Yukari (Summer)"
+    },
+    {
+      "aliases": [
+        "ランファ"
+      ],
+      "id": 126901,
+      "name": "ランファ（サマー）",
+      "name_en": "Ranpha (Summer)"
+    },
+    {
+      "aliases": [
+        "クウカ"
+      ],
+      "id": 127001,
+      "name": "クウカ（サマー）",
+      "name_en": "Kuuka (Summer)"
+    },
+    {
+      "aliases": [
+        "シノブ"
+      ],
+      "id": 127101,
+      "name": "シノブ（サマー）",
+      "name_en": "Shinobu (Summer)"
+    },
+    {
+      "aliases": [
+        "キャル"
+      ],
+      "id": 127201,
+      "name": "キャル（編入生）",
+      "name_en": "Kyaru (Student)"
+    },
+    {
+      "aliases": [
+        "スズナ"
+      ],
+      "id": 127301,
+      "name": "スズナ（編入生）",
+      "name_en": "Suzuna (Student)"
+    },
+    {
+      "aliases": [
+        "ビカラ"
+      ],
+      "id": 127401,
+      "name": "ビカラ（コラボ）",
+      "name_en": "ビカラ（コラボ）"
+    },
+    {
+      "aliases": [
+        "サレン"
+      ],
+      "id": 127501,
+      "name": "サレン（サラサリア）",
+      "name_en": "Saren (Salasaria)"
+    },
+    {
+      "aliases": [
+        "ルカ"
+      ],
+      "id": 127601,
+      "name": "ルカ（サラサリア）",
+      "name_en": "Ruka (Salasaria)"
+    },
+    {
+      "aliases": [],
+      "id": 127701,
+      "name": "リンド",
+      "name_en": "Lind"
+    },
+    {
+      "aliases": [],
+      "id": 127801,
+      "name": "ヴルム",
+      "name_en": "Wurm"
+    },
+    {
+      "aliases": [
+        "ペコリーヌ"
+      ],
+      "id": 127901,
+      "name": "ペコリーヌ（クリスマス）",
+      "name_en": "Pecorine (Christmas)"
+    },
+    {
+      "aliases": [
+        "クレジッタ"
+      ],
+      "id": 128001,
+      "name": "クレジッタ（クリスマス）",
+      "name_en": "Creditta (Christmas)"
+    },
+    {
+      "aliases": [
+        "シズル"
+      ],
+      "id": 128101,
+      "name": "シズル（シズル&リノ）",
+      "name_en": "シズル（シズル&リノ）"
+    },
+    {
+      "aliases": [
+        "リノ"
+      ],
+      "id": 128201,
+      "name": "リノ（シズル&リノ）",
+      "name_en": "リノ（シズル&リノ）"
+    },
+    {
+      "aliases": [
+        "イノリ"
+      ],
+      "id": 128301,
+      "name": "イノリ（ニューイヤー）",
+      "name_en": "Inori (New Year)"
+    },
+    {
+      "aliases": [
+        "ハツネ"
+      ],
+      "id": 128401,
+      "name": "ハツネ（ニューイヤー）",
+      "name_en": "Hatsune (New Year)"
+    },
+    {
+      "aliases": [
+        "カスミ"
+      ],
+      "id": 128501,
+      "name": "カスミ（ニューイヤー）",
+      "name_en": "Kasumi (New Year)"
+    },
+    {
+      "aliases": [
+        "リリ"
+      ],
+      "id": 128601,
+      "name": "リリ（フォールン）",
+      "name_en": "Riri (Fallen)"
+    },
+    {
+      "aliases": [
+        "ヒヨリ"
+      ],
+      "id": 128701,
+      "name": "ヒヨリ（アストラル）",
+      "name_en": "Hiyori (Astral)"
+    },
+    {
+      "aliases": [
+        "レイ"
+      ],
+      "id": 128801,
+      "name": "レイ（アストラル）",
+      "name_en": "Rei (Astral)"
+    },
+    {
+      "aliases": [
+        "ユイ"
+      ],
+      "id": 128901,
+      "name": "ユイ（アストラル）",
+      "name_en": "Yui (Astral)"
+    },
+    {
+      "aliases": [],
+      "id": 129001,
+      "name": "エリス",
+      "name_en": "Eris"
+    },
+    {
+      "aliases": [
+        "ユニ"
+      ],
+      "id": 129301,
+      "name": "ユニ（ウィンター）",
+      "name_en": "Yuni (Winter)"
+    },
+    {
+      "aliases": [
+        "クロエ"
+      ],
+      "id": 129401,
+      "name": "クロエ（ウィンター）",
+      "name_en": "Chloe (Winter)"
+    },
+    {
+      "aliases": [
+        "チエル"
+      ],
+      "id": 129501,
+      "name": "チエル（ウィンター）",
+      "name_en": "Chieru (Winter)"
+    },
+    {
+      "aliases": [],
+      "id": 129601,
+      "name": "アネモネ",
+      "name_en": "Anemone"
+    },
+    {
+      "aliases": [],
+      "id": 129701,
+      "name": "ネフィ＝ネラ",
+      "name_en": "Nephi Nela"
+    },
+    {
+      "aliases": [
+        "マコト"
+      ],
+      "id": 129801,
+      "name": "マコト（コマンダー）",
+      "name_en": "Makoto (Commander)"
+    },
+    {
+      "aliases": [
+        "エリコ"
+      ],
+      "id": 129901,
+      "name": "エリコ（コマンダー）",
+      "name_en": "Eriko (Commander)"
+    },
+    {
+      "aliases": [],
+      "id": 130001,
+      "name": "ヤマト",
+      "name_en": "Yamato"
+    },
+    {
+      "aliases": [],
+      "id": 130101,
+      "name": "ワカナ",
+      "name_en": "Wakana"
+    },
+    {
+      "aliases": [],
+      "id": 130201,
+      "name": "フブキ",
+      "name_en": "Fubuki"
+    },
+    {
+      "aliases": [
+        "レイ"
+      ],
+      "id": 130601,
+      "name": "レイ（アストラル）",
+      "name_en": "Rei (Astral)"
+    },
+    {
+      "aliases": [
+        "キョウカ"
+      ],
+      "id": 130701,
+      "name": "キョウカ（スプリング）",
+      "name_en": "Kyouka (Spring)"
+    },
+    {
+      "aliases": [
+        "スズメ"
+      ],
+      "id": 130801,
+      "name": "スズメ（スプリング）",
+      "name_en": "Suzume (Spring)"
+    },
+    {
+      "aliases": [],
+      "id": 130901,
+      "name": "クルル",
+      "name_en": "Kururu"
+    },
+    {
+      "aliases": [
+        "マホ"
+      ],
+      "id": 131001,
+      "name": "マホ（ドリームパーク）",
+      "name_en": "Maho (Dream Park)"
+    },
+    {
+      "aliases": [
+        "ネア"
+      ],
+      "id": 131101,
+      "name": "ネア（サマー）",
+      "name_en": "Nea (Summer)"
+    },
+    {
+      "aliases": [
+        "ミソラ"
+      ],
+      "id": 131201,
+      "name": "ミソラ（サマー）",
+      "name_en": "Misora (Summer)"
+    },
+    {
+      "aliases": [],
+      "id": 131301,
+      "name": "リリ",
+      "name_en": "Riri"
+    },
+    {
+      "aliases": [],
+      "id": 131401,
+      "name": "クリア",
+      "name_en": "Qulia"
+    },
+    {
+      "aliases": [],
+      "id": 131501,
+      "name": "プレシア",
+      "name_en": "Precia"
+    },
+    {
+      "aliases": [
+        "リリ"
+      ],
+      "id": 131601,
+      "name": "リリ（サマー）",
+      "name_en": "Riri (Summer)"
+    },
+    {
+      "aliases": [
+        "アメス"
+      ],
+      "id": 131701,
+      "name": "アメス（サマー）",
+      "name_en": "Ameth (Summer)"
+    },
+    {
+      "aliases": [
+        "ホマレ"
+      ],
+      "id": 131801,
+      "name": "ホマレ（サマー）",
+      "name_en": "Homare (Summer)"
+    },
+    {
+      "aliases": [
+        "エミリア"
+      ],
+      "id": 131901,
+      "name": "エミリア（サマー）",
+      "name_en": "Emilia (Summer)"
+    },
+    {
+      "aliases": [
+        "エキドナ"
+      ],
+      "id": 132001,
+      "name": "エキドナ（サマー）",
+      "name_en": "Echidna (Summer)"
+    },
+    {
+      "aliases": [
+        "レム"
+      ],
+      "id": 132101,
+      "name": "レム（サマー）",
+      "name_en": "Rem (Summer)"
+    },
+    {
+      "aliases": [
+        "ノゾミ"
+      ],
+      "id": 132201,
+      "name": "ノゾミ（アルケミスト）",
+      "name_en": "Nozomi (Alchemist)"
+    },
+    {
+      "aliases": [],
+      "id": 132301,
+      "name": "ルイズマリー",
+      "name_en": "Louise-Marie"
+    },
+    {
+      "aliases": [],
+      "id": 132401,
+      "name": "イロハ",
+      "name_en": "Iroha"
+    },
+    {
+      "aliases": [],
+      "id": 132501,
+      "name": "ソノ",
+      "name_en": "Sono"
+    },
+    {
+      "aliases": [
+        "ライラエル"
+      ],
+      "id": 132801,
+      "name": "ライラエル（クリスマス）",
+      "name_en": "Lyrael (Christmas)"
+    },
+    {
+      "aliases": [
+        "イオ"
+      ],
+      "id": 132901,
+      "name": "イオ（クリスマス）",
+      "name_en": "Io (Christmas)"
+    },
+    {
+      "aliases": [],
+      "id": 133001,
+      "name": "グレイス",
+      "name_en": "Grace"
+    },
+    {
+      "aliases": [],
+      "id": 133101,
+      "name": "ヴァイオレット",
+      "name_en": "Violet"
+    },
+    {
+      "aliases": [
+        "モニカ"
+      ],
+      "id": 133201,
+      "name": "モニカ（ニューイヤー）",
+      "name_en": "Monika (New Year)"
+    },
+    {
+      "aliases": [
+        "サレン"
+      ],
+      "id": 133501,
+      "name": "サレン（ニューイヤー）",
+      "name_en": "Saren (New Year)"
+    },
+    {
+      "aliases": [],
+      "id": 133601,
+      "name": "メドゥーサ",
+      "name_en": "Medusa"
+    },
+    {
+      "aliases": [
+        "ラビリスタ"
+      ],
+      "id": 133701,
+      "name": "ラビリスタ（アルファ）",
+      "name_en": "Labyrista (Alpha)"
+    },
+    {
+      "aliases": [
+        "ネネカ"
+      ],
+      "id": 133801,
+      "name": "ネネカ（アルファ）",
+      "name_en": "Neneka (Alpha)"
+    },
+    {
+      "aliases": [
+        "クリスティーナ"
+      ],
+      "id": 133901,
+      "name": "クリスティーナ（アルファ）",
+      "name_en": "Christina (Alpha)"
+    },
+    {
+      "aliases": [],
+      "id": 134001,
+      "name": "フィオ",
+      "name_en": "Fio"
+    },
+    {
+      "aliases": [],
+      "id": 134101,
+      "name": "フブキ",
+      "name_en": "Fubuki"
+    },
+    {
+      "aliases": [
+        "ライラエル"
+      ],
+      "id": 134201,
+      "name": "ライラエル（クリスマス）",
+      "name_en": "Lyrael (Christmas)"
+    },
+    {
+      "aliases": [
+        "ランファ"
+      ],
+      "id": 134301,
+      "name": "ランファ（儀装束）",
+      "name_en": "Ranpha (Ceremonial)"
+    },
+    {
+      "aliases": [
+        "チカ"
+      ],
+      "id": 134401,
+      "name": "チカ（儀装束）",
+      "name_en": "Chika (Ceremonial)"
+    },
+    {
+      "aliases": [
+        "クローチェ"
+      ],
+      "id": 134501,
+      "name": "クローチェ（エアリアル）",
+      "name_en": "Croce (Aerial)"
+    },
+    {
+      "aliases": [
+        "アオイ"
+      ],
+      "id": 134601,
+      "name": "アオイ（パイロット）",
+      "name_en": "Aoi (Pilot)"
+    },
+    {
+      "aliases": [],
+      "id": 134701,
+      "name": "ホウオウ",
+      "name_en": "Ho-oh"
+    },
+    {
+      "aliases": [
+        "ツムギ"
+      ],
+      "id": 134801,
+      "name": "ツムギ（ジオ・ゲヘナ）",
+      "name_en": "Tsumugi (Geo Gehenna)"
+    },
+    {
+      "aliases": [],
+      "id": 134901,
+      "name": "カノン",
+      "name_en": "Kanon"
+    },
+    {
+      "aliases": [
+        "エリス"
+      ],
+      "id": 135001,
+      "name": "エリス（サマー）",
+      "name_en": "Eris (Summer)"
+    },
+    {
+      "aliases": [
+        "シェフィ"
+      ],
+      "id": 135101,
+      "name": "シェフィ（サマー）",
+      "name_en": "Sheffy (Summer)"
+    },
+    {
+      "aliases": [
+        "プレシア"
+      ],
+      "id": 135201,
+      "name": "プレシア（サマー）",
+      "name_en": "Precia (Summer)"
+    },
+    {
+      "aliases": [
+        "クリア"
+      ],
+      "id": 135301,
+      "name": "クリア（サマー）",
+      "name_en": "Qulia (Summer)"
+    },
+    {
+      "aliases": [
+        "アネモネ"
+      ],
+      "id": 135401,
+      "name": "アネモネ（サマー）",
+      "name_en": "Anemone (Summer)"
+    },
+    {
+      "aliases": [],
+      "id": 135501,
+      "name": "アイラ",
+      "name_en": "Aira"
+    },
+    {
+      "aliases": [],
+      "id": 135601,
+      "name": "シナツ",
+      "name_en": "Shinatsu"
+    },
+    {
+      "aliases": [
+        "ヒヨリ"
+      ],
+      "id": 135701,
+      "name": "ヒヨリ（サラサリア）",
+      "name_en": "Hiyori (Salasaria)"
+    },
+    {
+      "aliases": [],
+      "id": 135801,
+      "name": "ユキノ",
+      "name_en": "Yukino"
+    },
+    {
+      "aliases": [],
+      "id": 135901,
+      "name": "サツキ",
+      "name_en": "Satsuki"
+    },
+    {
+      "aliases": [],
+      "id": 136001,
+      "name": "アラクネ",
+      "name_en": "Arachne"
+    },
+    {
+      "aliases": [],
+      "id": 136101,
+      "name": "サクラ",
+      "name_en": "Sakura"
+    },
+    {
+      "aliases": [],
+      "id": 136201,
+      "name": "ナーナ",
+      "name_en": "Naana"
+    },
+    {
+      "aliases": [
+        "ミソラ"
+      ],
+      "id": 136301,
+      "name": "ミソラ（クリスマス）",
+      "name_en": "Misora (Christmas)"
+    },
+    {
+      "aliases": [
+        "ユイ"
+      ],
+      "id": 136401,
+      "name": "ユイ（クリスマス）",
+      "name_en": "Yui (Christmas)"
+    },
+    {
+      "aliases": [
+        "シズル"
+      ],
+      "id": 136501,
+      "name": "シズル（ニューイヤー）",
+      "name_en": "Shizuru (New Year)"
+    },
+    {
+      "aliases": [],
+      "id": 136601,
+      "name": "メドゥーサ",
+      "name_en": "Medusa"
+    },
+    {
+      "aliases": [
+        "ラビリスタ"
+      ],
+      "id": 136701,
+      "name": "ラビリスタ（アルファ）",
+      "name_en": "Labyrista (Alpha)"
+    },
+    {
+      "aliases": [
+        "ランファ"
+      ],
+      "id": 136801,
+      "name": "ランファ（儀装束）",
+      "name_en": "Ranpha (Ceremonial)"
+    },
+    {
+      "aliases": [],
+      "id": 136901,
+      "name": "ルルィ",
+      "name_en": "Rurui"
+    },
+    {
+      "aliases": [
+        "ニノン"
+      ],
+      "id": 137101,
+      "name": "ニノン（サマー）",
+      "name_en": "Ninon (Summer)"
+    },
+    {
+      "aliases": [],
+      "id": 137201,
+      "name": "ラビリスタ",
+      "name_en": "Labyrista"
+    },
+    {
+      "aliases": [],
+      "id": 137301,
+      "name": "カノン",
+      "name_en": "Kanon"
+    },
+    {
+      "aliases": [
+        "カスミ"
+      ],
+      "id": 137401,
+      "name": "カスミ（シスター）",
+      "name_en": "Kasumi (Sister)"
+    },
+    {
+      "aliases": [],
+      "id": 137501,
+      "name": "アイラ",
+      "name_en": "Aira"
+    },
+    {
+      "aliases": [
+        "コッコロ"
+      ],
+      "id": 137601,
+      "name": "コッコロ（嚮導幼君）",
+      "name_en": "Kokkoro (Little Guidance)"
+    },
+    {
+      "aliases": [],
+      "id": 137801,
+      "name": "ユキノ",
+      "name_en": "Yukino"
+    },
+    {
+      "aliases": [
+        "リノ"
+      ],
+      "id": 137901,
+      "name": "リノ（ニューイヤー）",
+      "name_en": "Rino (New Year)"
+    },
+    {
+      "aliases": [
+        "ヴァイオレット"
+      ],
+      "id": 138001,
+      "name": "ヴァイオレット（イサナミ）",
+      "name_en": "Violet (Isanami)"
+    },
+    {
+      "aliases": [
+        "ライラエル"
+      ],
+      "id": 138101,
+      "name": "ライラエル（パルフェクト）",
+      "name_en": "Lyrael (Perfect)"
+    },
+    {
+      "aliases": [
+        "ネフィ＝ネラ"
+      ],
+      "id": 138201,
+      "name": "ネフィ＝ネラ（鬼面仏心）",
+      "name_en": "Nephi Nela (Buddha)"
+    },
+    {
+      "aliases": [
+        "ペコリーヌ"
+      ],
+      "id": 138301,
+      "name": "ペコリーヌ（アストライア）",
+      "name_en": "Pecorine (Astraea)"
+    },
+    {
+      "aliases": [],
+      "id": 138601,
+      "name": "サクラ",
+      "name_en": "Sakura"
+    },
+    {
+      "aliases": [
+        "ワカナ"
+      ],
+      "id": 138701,
+      "name": "ワカナ（ウィンター）",
+      "name_en": "Wakana (Winter)"
+    },
+    {
+      "aliases": [
+        "シオリ"
+      ],
+      "id": 138801,
+      "name": "シオリ（ウィンター）",
+      "name_en": "Shiori (Winter)"
+    },
+    {
+      "aliases": [
+        "グレイス"
+      ],
+      "id": 138901,
+      "name": "グレイス（バニー）",
+      "name_en": "Grace (Bunny)"
+    },
+    {
+      "aliases": [
+        "キョウカ"
+      ],
+      "id": 139001,
+      "name": "キョウカ（ゴシック）",
+      "name_en": "Kyouka (Gothic)"
+    },
+    {
+      "aliases": [
+        "キャル"
+      ],
+      "id": 139101,
+      "name": "キャル（覇瞳天星）",
+      "name_en": "Kyaru (Hadou Tensei)"
+    },
+    {
+      "aliases": [
+        "ミホ"
+      ],
+      "id": 139201,
+      "name": "ミホ（ガルパン）",
+      "name_en": "Miho (Garupan)"
+    },
+    {
+      "aliases": [
+        "マホ"
+      ],
+      "id": 139301,
+      "name": "マホ（ガルパン）",
+      "name_en": "Maho (Garupan)"
+    },
+    {
+      "aliases": [
+        "エリカ"
+      ],
+      "id": 139401,
+      "name": "エリカ（ガルパン）",
+      "name_en": "Erika (Garupan)"
+    },
+    {
+      "aliases": [
+        "リリ"
+      ],
+      "id": 139501,
+      "name": "リリ（ヴァルキュリア）",
+      "name_en": "Riri (Valkyria)"
+    },
+    {
+      "aliases": [
+        "クリア"
+      ],
+      "id": 139601,
+      "name": "クリア（ヴァルキュリア）",
+      "name_en": "Qulia (Valkyria)"
+    },
+    {
+      "aliases": [
+        "プレシア"
+      ],
+      "id": 139701,
+      "name": "プレシア（ヴァルキュリア）",
+      "name_en": "Precia (Valkyria)"
+    },
+    {
+      "aliases": [
+        "シェフィ"
+      ],
+      "id": 139801,
+      "name": "シェフィ（ヴァードラッヘ）",
+      "name_en": "Sheffy (Wahrer Drache)"
+    },
+    {
+      "aliases": [
+        "ルイズマリー"
+      ],
+      "id": 139901,
+      "name": "ルイズマリー（サマー）",
+      "name_en": "Louise-Marie (Summer)"
+    },
+    {
+      "aliases": [
+        "クレジッタ"
+      ],
+      "id": 140001,
+      "name": "クレジッタ（サマー）",
+      "name_en": "Creditta (Summer)"
+    },
+    {
+      "aliases": [
+        "フブキ"
+      ],
+      "id": 140101,
+      "name": "フブキ（サマー）",
+      "name_en": "Fubuki (Summer)"
+    },
+    {
+      "aliases": [
+        "ヴァンピィ"
+      ],
+      "id": 140201,
+      "name": "ヴァンピィ（サマー）",
+      "name_en": "Vampy (Summer)"
+    },
+    {
+      "aliases": [],
+      "id": 140301,
+      "name": "ティア",
+      "name_en": "Tia"
+    },
+    {
+      "aliases": [
+        "ヴルム"
+      ],
+      "id": 140501,
+      "name": "ヴルム（ヴァルムドラッヘ）",
+      "name_en": "Wurm (Wyrmdrache)"
+    },
+    {
+      "aliases": [
+        "シズル"
+      ],
+      "id": 141401,
+      "name": "シズル（ニューイヤー）",
+      "name_en": "Shizuru (New Year)"
+    },
+    {
+      "aliases": [
+        "ヴァイオレット"
+      ],
+      "id": 141501,
+      "name": "ヴァイオレット（イサナミ）",
+      "name_en": "Violet (Isanami)"
+    },
+    {
+      "aliases": [
+        "グレイス"
+      ],
+      "id": 141601,
+      "name": "グレイス（バニー）",
+      "name_en": "Grace (Bunny)"
+    },
+    {
+      "aliases": [],
+      "id": 170101,
+      "name": "ジータ",
+      "name_en": "Djeeta"
+    },
+    {
+      "aliases": [
+        "ヒヨリ"
+      ],
+      "id": 180101,
+      "name": "ヒヨリ（プリンセス）",
+      "name_en": "Hiyori (Princess)"
+    },
+    {
+      "aliases": [
+        "ユイ"
+      ],
+      "id": 180201,
+      "name": "ユイ（プリンセス）",
+      "name_en": "Yui (Princess)"
+    },
+    {
+      "aliases": [
+        "レイ"
+      ],
+      "id": 180301,
+      "name": "レイ（プリンセス）",
+      "name_en": "Rei (Princess)"
+    },
+    {
+      "aliases": [
+        "ペコリーヌ"
+      ],
+      "id": 180401,
+      "name": "ペコリーヌ（プリンセス）",
+      "name_en": "Pecorine (Princess)"
+    },
+    {
+      "aliases": [
+        "コッコロ"
+      ],
+      "id": 180501,
+      "name": "コッコロ（プリンセス）",
+      "name_en": "Kokkoro (Princess)"
+    },
+    {
+      "aliases": [
+        "キャル"
+      ],
+      "id": 180601,
+      "name": "キャル（プリンセス）",
+      "name_en": "Kyaru (Princess)"
+    },
+    {
+      "aliases": [],
+      "id": 180701,
+      "name": "ハツネ＆シオリ",
+      "name_en": "Hatsune & Shiori"
+    },
+    {
+      "aliases": [],
+      "id": 180801,
+      "name": "ミソギ＆ミミ＆キョウカ",
+      "name_en": "Misogi & Mimi & Kyoka"
+    },
+    {
+      "aliases": [],
+      "id": 180901,
+      "name": "アキノ＆サレン",
+      "name_en": "Akino & Saren"
+    },
+    {
+      "aliases": [],
+      "id": 181001,
+      "name": "アン＆グレア",
+      "name_en": "Anne & Grea"
+    },
+    {
+      "aliases": [],
+      "id": 181101,
+      "name": "シズル＆リノ",
+      "name_en": "Shizuru & Rino"
+    },
+    {
+      "aliases": [
+        "シェフィ"
+      ],
+      "id": 181201,
+      "name": "シェフィ（プリンセス）",
+      "name_en": "Sheffy (Princess)"
+    }
+  ],
+  "clan_battle_bosses": [
+    {
+      "aliases": [],
+      "id": 401908401,
+      "name": "マダムエレクトラ"
+    },
+    {
+      "aliases": [],
+      "id": 401908402,
+      "name": "ミストシーカー"
+    },
+    {
+      "aliases": [],
+      "id": 401908403,
+      "name": "バイオドーザー"
+    },
+    {
+      "aliases": [],
+      "id": 401908404,
+      "name": "トライロッカー"
+    },
+    {
+      "aliases": [],
+      "id": 401908408,
+      "name": "メデューサ"
+    }
+  ],
+  "generated_at": "2026-09-14T19:53:44.158679+00:00",
+  "schema_version": "1",
+  "source": "esterTion/redive_master_db_diff",
+  "source_commit": "14f09e82ff6e43c023b2504e3d55bca69ac22ace"
+}
