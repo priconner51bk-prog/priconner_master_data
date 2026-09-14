@@ -101,6 +101,10 @@ function upsertTable_(sheet, incoming) {
     if (headers.aliases !== undefined) row[headers.aliases] = JSON.stringify(item.aliases || []);
     rows.push(row); positions[key] = rows.length - 1;
   });
+  // Keep restored and updated rows in deterministic ID order.
+  rows.sort(function(a, b) {
+    return Number(a[headers.id]) - Number(b[headers.id]);
+  });
   if (rows.length) sheet.getRange(2, 1, rows.length, values[0].length).setValues(rows);
 }
 
