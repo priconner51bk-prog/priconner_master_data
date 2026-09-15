@@ -3,8 +3,13 @@ name: Update master data
 on:
   workflow_dispatch:
   schedule:
-    # Daily at 12:20 JST (03:20 UTC), after the game's usual data update window.
-    - cron: "20 3 * * *"
+    # Daily at 12:20 JST, after the game's usual data update window.
+    - cron: "20 12 * * *"
+      timezone: "Asia/Tokyo"
+
+concurrency:
+  group: update-master-data
+  cancel-in-progress: false
 
 permissions:
   contents: write
