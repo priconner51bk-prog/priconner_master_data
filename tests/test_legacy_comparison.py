@@ -17,7 +17,7 @@ def test_boss_output_matches_legacy_gui_selection(tmp_path):
     actual = extract(DB, UNIT_STATUS)["clan_battle_bosses"]
     with sqlite3.connect(DB) as conn:
         legacy = [
-                {"id": int(enemy_id), "name": name_jp, "aliases": [name_jp]}
+                {"id": int(enemy_id), "name": name_jp, "hp": hp, "aliases": [name_jp]}
             for enemy_id, unit_id, hp, name_jp in conn.execute(
                 "SELECT enemy_id, unit_id, hp, name_jp FROM enemy_parameter "
                 "WHERE enemy_id LIKE '4019%' ORDER BY enemy_id"

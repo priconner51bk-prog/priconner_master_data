@@ -36,7 +36,7 @@ def test_bosses_apply_legacy_gui_filters(tmp_path):
     c.close()
     status = tmp_path / "UnitStatus.csv"
     status.write_text("unit_id,unit_name_jp,unit_name\n300001,ボス正式名,Boss Unit\n", encoding="utf-8")
-    assert extract(p, status)["clan_battle_bosses"] == [{"id": 40190101, "name": "ボス", "aliases": ["ボス"]}]
+    assert extract(p, status)["clan_battle_bosses"] == [{"id": 40190101, "name": "ボス", "hp": 2000000000, "aliases": ["ボス"]}]
 
 
 def test_schema_change_fails_closed(tmp_path):

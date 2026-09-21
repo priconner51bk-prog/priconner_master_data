@@ -14,6 +14,8 @@ def upsert_rows(current: list[dict], source: list[dict]) -> list[dict]:
         if row_id in by_id:
             row = by_id[row_id]
             row["name"] = incoming["name"]
+            if "hp" in incoming:
+                row["hp"] = incoming["hp"]
             if not row.get("aliases"):
                 alias = derive_alias(row["name"]) or row["name"].strip()
                 if alias:

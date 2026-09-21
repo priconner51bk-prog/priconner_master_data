@@ -28,7 +28,7 @@ function syncMasterDataFromGitHub() {
   return {path: path, characters: (payload.characters || []).length, clan_battle_bosses: (payload.clan_battle_bosses || []).length};
 }
 
-// GitHub Actions webhook entry point. Deploy this project as a Web app and set
+// Master-data scheduler webhook entry point. Deploy this project as a Web app and set
 // WEBHOOK_TOKEN in Script Properties. The token is sent in the JSON body.
 function doPost(e) {
   var props = PropertiesService.getScriptProperties();
@@ -108,12 +108,14 @@ function upsertTable_(sheet, incoming) {
     if (index !== undefined) {
       rows[index][headers.name] = String(item.name || '');
       if (headers.name_en !== undefined && item.name_en !== undefined) rows[index][headers.name_en] = String(item.name_en || '');
+      if (headers.hp !== undefined && item.hp !== undefined) rows[index][headers.hp] = Number(item.hp);
       if (headers.release !== undefined && item.release !== undefined) rows[index][headers.release] = String(item.release || '');
       return;
     }
     var row = new Array(values[0].length).fill('');
     row[headers.id] = Number(item.id); row[headers.name] = String(item.name || '');
     if (headers.name_en !== undefined) row[headers.name_en] = String(item.name_en || '');
+    if (headers.hp !== undefined && item.hp !== undefined) row[headers.hp] = Number(item.hp);
     if (headers.release !== undefined) row[headers.release] = String(item.release || '');
     if (headers.aliases !== undefined) row[headers.aliases] = JSON.stringify(item.aliases || []);
     rows.push(row); positions[key] = rows.length - 1;
@@ -137,11 +139,13 @@ function readRows_(book, name) {
   return values.slice(1).filter(function(r) { return r[h.id] !== ''; }).map(function(r) {
     var raw = r[h.aliases], a = raw === '' ? [] : JSON.parse(String(raw));
     if (!Array.isArray(a)) throw new Error('aliases must be an array: ' + name);
-    return {id: Number(r[h.id]), name: String(r[h.name]), name_en: String(r[h.name_en] || ''), aliases: a.map(String)};
+    var out = {id: Number(r[h.id]), name: String(r[h.name]), name_en: String(r[h.name_en] || ''), aliases: a.map(String)};
+    if (h.hp !== undefined && r[h.hp] !== '') out.hp = Number(r[h.hp]);
+    return out;
   }).sort(function(a,b) { return a.id-b.id; });
 }
 function readMetadata_(book) { var s=book.getSheetByName('metadata'); if (!s) return {}; var v=s.getDataRange().getValues(), out={}; if (v.length<2) return out; v[0].forEach(function(k,i) { if(k) out[String(k)]=String(v[1][i]||''); }); return out; }
-function validate_(rows, name) { var ids={}; rows.forEach(function(r) { if(!Number.isInteger(r.id)||r.id<=0||ids[r.id]) throw new Error('invalid/duplicate ID in '+name); if(!r.name.trim()) throw new Error('missing name in '+name); ids[r.id]=true; r.aliases.forEach(function(a) { if(!String(a).trim()) throw new Error('empty alias in '+name); }); }); }
+function validate_(rows, name) { var ids={}; rows.forEach(function(r) { if(!Number.isInteger(r.id)||r.id<=0||ids[r.id]) throw new Error('invalid/duplicate ID in '+name); if(!Number.isInteger(r.hp) || r.hp <= 0) { if(r.hp !== undefined) throw new Error('invalid hp in '+name); } if(!r.name.trim()) throw new Error('missing name in '+name); ids[r.id]=true; r.aliases.forEach(function(a) { if(!String(a).trim()) throw new Error('empty alias in '+name); }); }); }
 function detectAliasCollisions_(characters, bosses) { var seen={}, out=[]; characters.concat(bosses).forEach(function(r) { r.aliases.forEach(function(a) { seen[a]=seen[a]||[]; if(seen[a].indexOf(r.id)<0)seen[a].push(r.id); }); }); Object.keys(seen).forEach(function(a) { if(seen[a].length>1)out.push({alias:a,ids:seen[a]}); }); return out.sort(function(a,b){return a.alias.localeCompare(b.alias);}); }
 function addDynamicAliases_(rows) { return rows.map(function(r) { var m=r.name.match(/^(.*?)[（(].*[）)]\s*$/), alias=(m && m[1].trim()) || r.name.trim(); if(r.aliases.length===0 && alias) r.aliases.push(alias); return r; }); }
 function github_(repo,path,token,method,body) { var o={method:method,muteHttpExceptions:true,headers:{Authorization:'Bearer '+token,Accept:'application/vnd.github+json'}}; if(body){o.contentType='application/json';o.payload=JSON.stringify(body);} var r=UrlFetchApp.fetch('https://api.github.com/repos/'+repo+'/contents/'+path,o), c=r.getResponseCode(); if(method==='GET'&&c===404)return null; if(c<200||c>=300)throw new Error('GitHub API '+c+': '+r.getContentText()); return JSON.parse(r.getContentText()); }
