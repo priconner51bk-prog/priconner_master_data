@@ -74,23 +74,46 @@ def extract(db_path: Path, unit_status_path: Path | None = None, now: datetime |
         candidates = conn.execute("""SELECT enemy_id, unit_id, name, name_jp, hp
             FROM enemy_parameter WHERE enemy_id LIKE '4019%' AND hp >= 1000000000
             ORDER BY enemy_id""").fetchall()
+        schedule_by_month: dict[int, int] = {}
+        schedule_columns = {row[1] for row in conn.execute("PRAGMA table_info(clan_battle_schedule)")}
+        if {"release_month", "start_time"} <= schedule_columns:
+            for release_month, start_time in conn.execute(
+                "SELECT release_month, start_time FROM clan_battle_schedule"
+            ):
+                if release_month is None or not start_time:
+                    continue
+                year_text = str(start_time)[:4]
+                if year_text.isdigit():
+                    schedule_by_month[int(release_month)] = int(year_text) * 100 + int(release_month)
     known_units: dict[int, str] | None = None
     if unit_status_path is not None:
         with unit_status_path.open(encoding="utf-8-sig", newline="") as f:
             known_units = {int(r["unit_id"]): (r["unit_name_jp"], r["unit_name"]) for r in csv.DictReader(f)}
-    bosses = [(enemy_id, name_jp or (known_units[unit_id][0] if known_units is not None else name), hp)
-              for enemy_id, unit_id, name, name_jp, hp in candidates
-               if known_units is None or unit_id in known_units]
+    bosses = []
+    for enemy_id, unit_id, name, name_jp, hp in candidates:
+        if known_units is not None and unit_id not in known_units:
+            continue
+        row = {
+            "id": int(enemy_id),
+            "name": name_jp or (known_units[unit_id][0] if known_units is not None else name),
+            "hp": int(hp),
+        }
+        if known_units is not None:
+            row["name_en"] = known_units[unit_id][1]
+        release = schedule_by_month.get(int(str(enemy_id)[4:6]))
+        if release is not None:
+            row["release"] = release
+        bosses.append(row)
     characters = [{"id": int(i), "name": UNIT_NAME_JP_OVERRIDES.get(int(i), jp), "name_en": en, "aliases": []} for i, jp, en in units]
     # 配布対象は開催中の1開催分だけ。未到着なら直近の開催分を維持する。
     if bosses:
         current_month = (now or datetime.now(timezone.utc)).month
-        months = [int(str(i)[4:6]) for i, _, _ in bosses]
+        months = [int(str(row["id"])[4:6]) for row in bosses]
         counts = {m: months.count(m) for m in set(months)}
         complete = [m for m, count in counts.items() if count >= 5 and m <= current_month]
         target_month = max(complete) if complete else (current_month if current_month in counts else max(months))
-        bosses = [pair for pair, month in zip(bosses, months) if month == target_month]
-    clan_battle_bosses = [{"id": int(i), "name": n, "hp": int(hp), "aliases": []} for i, n, hp in bosses]
+        bosses = [row for row, month in zip(bosses, months) if month == target_month]
+    clan_battle_bosses = [{**row, "aliases": []} for row in bosses]
     if strict_boss_count and len(clan_battle_bosses) != 5:
         raise SchemaError(
             f"incomplete clan battle boss set: expected 5, got {len(clan_battle_bosses)}"
@@ -138,6 +161,8 @@ def generate(db_path: Path, output_dir: Path, source_commit: str, now: str | Non
                     fieldnames.append("name_en")
                 if any("hp" in row for row in rows):
                     fieldnames.append("hp")
+                if any("release" in row for row in rows):
+                    fieldnames.append("release")
                 fieldnames.append("aliases")
                 writer = csv.DictWriter(f, fieldnames=fieldnames)
                 writer.writeheader()

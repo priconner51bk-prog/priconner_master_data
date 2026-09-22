@@ -26,4 +26,4 @@ Google Sheets 同期を有効にする場合は、scheduler を実行する Wind
 自動コミットを避けるため、更新ジョブは停止します。
 
 `apps_script/Code.gs` は、Google Sheetsの3タブを検証し、GitHub Contents APIへJSONを同期します。`GITHUB_REPO`、`GITHUB_TOKEN`、任意の`GITHUB_PATH`はApps ScriptのScript Propertiesに設定します。aliasは複数IDに一致し得るため、利用側は候補一覧を表示し、1件に暗黙解決しません。
-`clan_battle_bosses` はGitHubからの同期時に必ず5件へ差し替えます。`hp` 列が無い既存シートでも列を自動追加して値を反映します。
+`clan_battle_bosses` はGitHubからの同期時に必ず5件へ差し替えます。`name_en`、`hp`、`release` 列が無い既存シートでも自動追加して値を反映します。既存IDのaliasは保持します。

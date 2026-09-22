@@ -3120,7 +3120,9 @@
       ],
       "hp": 2080000000,
       "id": 401909401,
-      "name": "フロストハウンド"
+      "name": "フロストハウンド",
+      "name_en": "Frost Hound",
+      "release": 202609
     },
     {
       "aliases": [
@@ -3128,7 +3130,9 @@
       ],
       "hp": 2120000000,
       "id": 401909405,
-      "name": "ランドスロース"
+      "name": "ランドスロース",
+      "name_en": "Land Sloth",
+      "release": 202609
     },
     {
       "aliases": [
@@ -3136,7 +3140,9 @@
       ],
       "hp": 2160000000,
       "id": 401909406,
-      "name": "ジャッカルシーフ"
+      "name": "ジャッカルシーフ",
+      "name_en": "Jackal Thief",
+      "release": 202609
     },
     {
       "aliases": [
@@ -3144,7 +3150,9 @@
       ],
       "hp": 2200000000,
       "id": 401909407,
-      "name": "ダークガーゴイル"
+      "name": "ダークガーゴイル",
+      "name_en": "Dark Gargoyle",
+      "release": 202609
     },
     {
       "aliases": [
@@ -3152,10 +3160,12 @@
       ],
       "hp": 2240000000,
       "id": 401909408,
-      "name": "グラットン"
+      "name": "グラットン",
+      "name_en": "Glutton",
+      "release": 202609
     }
   ],
-  "generated_at": "2026-09-22T04:01:10.853085+00:00",
+  "generated_at": "2026-09-22T04:08:08.977937+00:00",
   "schema_version": "1",
   "source": "esterTion/redive_master_db_diff",
   "source_commit": "8f7e13d88a5a6236dfdb012c82a82948796290e3"

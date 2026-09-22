@@ -108,19 +108,30 @@ function upsertTable_(sheet, incoming, replaceAll) {
   var headers = headerMap_(values[0]);
   if (headers.id === undefined || headers.name === undefined) throw new Error('id/name headers are required');
 
-  // Older sheets were created without the boss HP column.  The generated
-  // master data already contains hp, so add the column before reading rows;
-  // otherwise the value is silently dropped by both sync directions.
-  var hasHp = incoming.some(function(item) { return item.hp !== undefined; });
-  if (hasHp && headers.hp === undefined) {
-    sheet.getRange(1, values[0].length + 1).setValue('hp');
-    values = sheet.getDataRange().getValues();
-    headers = headerMap_(values[0]);
-  }
+  // Older sheets may be missing generated columns. Add them before reading
+  // rows so name_en, hp, and release are not silently dropped.
+  ['name_en', 'hp', 'release'].forEach(function(field) {
+    var present = incoming.some(function(item) { return item[field] !== undefined; });
+    if (present && headers[field] === undefined) {
+      sheet.getRange(1, values[0].length + 1).setValue(field);
+      values = sheet.getDataRange().getValues();
+      headers = headerMap_(values[0]);
+    }
+  });
 
   if (replaceAll) {
+    var existingAliases = {};
+    if (headers.aliases !== undefined) {
+      values.slice(1).forEach(function(row) {
+        if (row[headers.id] === '' || row[headers.aliases] === '') return;
+        var aliases = JSON.parse(String(row[headers.aliases]));
+        if (!Array.isArray(aliases)) throw new Error('aliases must be an array');
+        existingAliases[String(row[headers.id])] = aliases.map(String);
+      });
+    }
     var replacementRows = incoming.map(function(item) {
-      return rowFromItem_(item, values[0].length, headers);
+      var key = String(item.id);
+      return rowFromItem_(item, values[0].length, headers, existingAliases[key]);
     });
     replacementRows.sort(function(a, b) {
       return Number(a[headers.id]) - Number(b[headers.id]);
@@ -152,13 +163,13 @@ function upsertTable_(sheet, incoming, replaceAll) {
   if (rows.length) sheet.getRange(2, 1, rows.length, values[0].length).setValues(rows);
 }
 
-function rowFromItem_(item, width, headers) {
+function rowFromItem_(item, width, headers, aliasesOverride) {
   var row = new Array(width).fill('');
   row[headers.id] = Number(item.id); row[headers.name] = String(item.name || '');
   if (headers.name_en !== undefined) row[headers.name_en] = String(item.name_en || '');
   if (headers.hp !== undefined && item.hp !== undefined) row[headers.hp] = Number(item.hp);
   if (headers.release !== undefined) row[headers.release] = String(item.release || '');
-  if (headers.aliases !== undefined) row[headers.aliases] = JSON.stringify(item.aliases || []);
+  if (headers.aliases !== undefined) row[headers.aliases] = JSON.stringify(aliasesOverride === undefined ? (item.aliases || []) : aliasesOverride);
   return row;
 }
 
@@ -176,6 +187,7 @@ function readRows_(book, name) {
     if (!Array.isArray(a)) throw new Error('aliases must be an array: ' + name);
     var out = {id: Number(r[h.id]), name: String(r[h.name]), name_en: String(r[h.name_en] || ''), aliases: a.map(String)};
     if (h.hp !== undefined && r[h.hp] !== '') out.hp = Number(r[h.hp]);
+    if (h.release !== undefined && r[h.release] !== '') out.release = String(r[h.release]);
     return out;
   }).sort(function(a,b) { return a.id-b.id; });
 }

@@ -30,4 +30,10 @@ def test_boss_output_matches_legacy_gui_selection(tmp_path):
     complete = [m for m, count in counts.items() if count >= 5 and m <= current]
     target = max(complete) if complete else max(months)
     legacy = [row for row in legacy if int(str(row["id"])[4:6]) == target]
-    assert actual == legacy
+    comparable = [
+        {key: row[key] for key in ("id", "name", "hp", "aliases")}
+        for row in actual
+    ]
+    assert comparable == legacy
+    assert all(row.get("name_en") for row in actual)
+    assert all(row.get("release") for row in actual)

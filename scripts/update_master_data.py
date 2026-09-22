@@ -15,7 +15,13 @@ UPSTREAM = ROOT / ".upstream"
 INPUT = ROOT / ".input"
 DB_PATH = INPUT / "roboninon.db"
 OUTPUT = ROOT / "dist"
-UPSTREAM_URL = "https://github.com/esterTion/redive_master_db_diff.git"
+UNIT_STATUS = Path(
+    os.environ.get(
+        "PRICONNER_UNIT_STATUS_PATH",
+        str(ROOT.parent / "priconner_data_tool" / "priconner_data" / "UnitStatus.csv"),
+    )
+)
+UPSTREAM_URL = "git@github.com:esterTion/redive_master_db_diff.git"
 DB_URL = "https://roboninon.win/db/download"
 
 
@@ -118,19 +124,20 @@ def main() -> int:
     # leaves dist/ dirty on a test failure, which then makes
     # ensure_dist_clean() reject every retry.
     run([sys.executable, "-m", "pytest", "-q"])
-    run(
-        [
-            sys.executable,
-            "scripts/generate_master_data.py",
-            "--upstream",
-            str(UPSTREAM),
-            "--db",
-            str(DB_PATH),
-            "--output",
-            str(OUTPUT),
-            "--force",
-        ]
-    )
+    generate_command = [
+        sys.executable,
+        "scripts/generate_master_data.py",
+        "--upstream",
+        str(UPSTREAM),
+        "--db",
+        str(DB_PATH),
+        "--output",
+        str(OUTPUT),
+        "--force",
+    ]
+    if UNIT_STATUS.is_file():
+        generate_command.extend(["--unit-status", str(UNIT_STATUS)])
+    run(generate_command)
     sync_google_sheets()
     publish_dist()
     return 0
