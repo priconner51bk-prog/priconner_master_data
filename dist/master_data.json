@@ -362,6 +362,14 @@
     },
     {
       "aliases": [
+        "ミサキ"
+      ],
+      "id": 105012,
+      "name": "ミサキ（サマー）",
+      "name_en": "ミサキ（サマー）"
+    },
+    {
+      "aliases": [
         "ミツキ"
       ],
       "id": 105101,
@@ -495,6 +503,14 @@
       "id": 106801,
       "name": "ラビリスタ",
       "name_en": "Labyrista"
+    },
+    {
+      "aliases": [
+        "晶"
+      ],
+      "id": 106802,
+      "name": "晶",
+      "name_en": "晶"
     },
     {
       "aliases": [
@@ -742,7 +758,7 @@
       ],
       "id": 110201,
       "name": "ミサキ（サマー）",
-      "name_en": "Misaki (Summer)"
+      "name_en": "ミサキ（サマー）"
     },
     {
       "aliases": [
@@ -1398,7 +1414,7 @@
       ],
       "id": 119401,
       "name": "ペコリーヌ",
-      "name_en": "Pecorine"
+      "name_en": "ペコリーヌ"
     },
     {
       "aliases": [
@@ -1406,7 +1422,7 @@
       ],
       "id": 119501,
       "name": "コッコロ",
-      "name_en": "Kokkoro"
+      "name_en": "コッコロ"
     },
     {
       "aliases": [
@@ -1414,7 +1430,7 @@
       ],
       "id": 119601,
       "name": "キャル",
-      "name_en": "Kyaru"
+      "name_en": "キャル"
     },
     {
       "aliases": [
@@ -1422,7 +1438,7 @@
       ],
       "id": 119701,
       "name": "シェフィ",
-      "name_en": "Sheffy"
+      "name_en": "シェフィ"
     },
     {
       "aliases": [
@@ -1446,7 +1462,7 @@
       ],
       "id": 120101,
       "name": "イオ（ノワール）",
-      "name_en": "Io (Noir)"
+      "name_en": "イオ（ノワール）"
     },
     {
       "aliases": [
@@ -1454,7 +1470,7 @@
       ],
       "id": 120201,
       "name": "クウカ（ノワール）",
-      "name_en": "Kuuka (Noir)"
+      "name_en": "クウカ（ノワール）"
     },
     {
       "aliases": [
@@ -1462,7 +1478,7 @@
       ],
       "id": 120301,
       "name": "シズル（ノワール）",
-      "name_en": "Shizuru (Noir)"
+      "name_en": "シズル（ノワール）"
     },
     {
       "aliases": [
@@ -1710,7 +1726,7 @@
       ],
       "id": 123401,
       "name": "ジュン（キャンプ）",
-      "name_en": "Jun (Camp)"
+      "name_en": "ジュン（キャンプ）"
     },
     {
       "aliases": [
@@ -1910,7 +1926,7 @@
       ],
       "id": 125901,
       "name": "カヤ（リベレイター）",
-      "name_en": "Kaya (Liberator)"
+      "name_en": "カヤ（リベレイター）"
     },
     {
       "aliases": [
@@ -2126,7 +2142,7 @@
       ],
       "id": 128601,
       "name": "リリ（フォールン）",
-      "name_en": "Riri (Fallen)"
+      "name_en": "リリ（フォールン）"
     },
     {
       "aliases": [
@@ -2246,7 +2262,7 @@
       ],
       "id": 130601,
       "name": "レイ（アストラル）",
-      "name_en": "Rei (Astral)"
+      "name_en": "レイ（アストラル）"
     },
     {
       "aliases": [
@@ -2302,7 +2318,7 @@
       ],
       "id": 131301,
       "name": "リリ",
-      "name_en": "Riri"
+      "name_en": "リリ"
     },
     {
       "aliases": [
@@ -2310,7 +2326,7 @@
       ],
       "id": 131401,
       "name": "クリア",
-      "name_en": "Qulia"
+      "name_en": "クリア"
     },
     {
       "aliases": [
@@ -2318,7 +2334,7 @@
       ],
       "id": 131501,
       "name": "プレシア",
-      "name_en": "Precia"
+      "name_en": "プレシア"
     },
     {
       "aliases": [
@@ -2494,7 +2510,7 @@
       ],
       "id": 134101,
       "name": "フブキ",
-      "name_en": "Fubuki"
+      "name_en": "フブキ"
     },
     {
       "aliases": [
@@ -2502,7 +2518,7 @@
       ],
       "id": 134201,
       "name": "ライラエル（クリスマス）",
-      "name_en": "Lyrael (Christmas)"
+      "name_en": "ライラエル（クリスマス）"
     },
     {
       "aliases": [
@@ -2694,7 +2710,7 @@
       ],
       "id": 136601,
       "name": "メドゥーサ",
-      "name_en": "Medusa"
+      "name_en": "メドゥーサ"
     },
     {
       "aliases": [
@@ -2702,7 +2718,7 @@
       ],
       "id": 136701,
       "name": "ラビリスタ（アルファ）",
-      "name_en": "Labyrista (Alpha)"
+      "name_en": "ラビリスタ（アルファ）"
     },
     {
       "aliases": [
@@ -2710,7 +2726,7 @@
       ],
       "id": 136801,
       "name": "ランファ（儀装束）",
-      "name_en": "Ranpha (Ceremonial)"
+      "name_en": "ランファ（儀装束）"
     },
     {
       "aliases": [
@@ -2734,7 +2750,7 @@
       ],
       "id": 137201,
       "name": "ラビリスタ",
-      "name_en": "Labyrista"
+      "name_en": "ラビリスタ"
     },
     {
       "aliases": [
@@ -2742,7 +2758,7 @@
       ],
       "id": 137301,
       "name": "カノン",
-      "name_en": "Kanon"
+      "name_en": "カノン"
     },
     {
       "aliases": [
@@ -2758,7 +2774,7 @@
       ],
       "id": 137501,
       "name": "アイラ",
-      "name_en": "Aira"
+      "name_en": "アイラ"
     },
     {
       "aliases": [
@@ -2774,7 +2790,7 @@
       ],
       "id": 137801,
       "name": "ユキノ",
-      "name_en": "Yukino"
+      "name_en": "ユキノ"
     },
     {
       "aliases": [
@@ -2822,7 +2838,7 @@
       ],
       "id": 138601,
       "name": "サクラ",
-      "name_en": "Sakura"
+      "name_en": "サクラ"
     },
     {
       "aliases": [
@@ -2966,7 +2982,7 @@
       ],
       "id": 140401,
       "name": "リーザ",
-      "name_en": "Liza"
+      "name_en": "リーザ"
     },
     {
       "aliases": [
@@ -2974,7 +2990,7 @@
       ],
       "id": 140501,
       "name": "ヴルム（ヴァルムドラッヘ）",
-      "name_en": "Wurm (Warmdrache)"
+      "name_en": "ヴルム（ヴァルムドラッヘ）"
     },
     {
       "aliases": [
@@ -2990,7 +3006,7 @@
       ],
       "id": 141401,
       "name": "シズル（ニューイヤー）",
-      "name_en": "Shizuru (New Year)"
+      "name_en": "シズル（ニューイヤー）"
     },
     {
       "aliases": [
@@ -2998,7 +3014,7 @@
       ],
       "id": 141501,
       "name": "ヴァイオレット（イサナミ）",
-      "name_en": "Violet (Isanami)"
+      "name_en": "ヴァイオレット（イサナミ）"
     },
     {
       "aliases": [
@@ -3006,7 +3022,7 @@
       ],
       "id": 141601,
       "name": "グレイス（バニー）",
-      "name_en": "Grace (Bunny)"
+      "name_en": "グレイス（バニー）"
     },
     {
       "aliases": [
@@ -3014,7 +3030,7 @@
       ],
       "id": 170101,
       "name": "ジータ",
-      "name_en": "Djeeta"
+      "name_en": "ジータ"
     },
     {
       "aliases": [
@@ -3165,7 +3181,7 @@
       "release": 202609
     }
   ],
-  "generated_at": "2026-09-22T04:08:08.977937+00:00",
+  "generated_at": "2026-09-22T04:25:39.618053+00:00",
   "schema_version": "1",
   "source": "esterTion/redive_master_db_diff",
   "source_commit": "8f7e13d88a5a6236dfdb012c82a82948796290e3"

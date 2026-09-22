@@ -1,8 +1,8 @@
 # priconner_master_data
 
-`priconner_data_tool` の SQLite (`unit_data`, `enemy_parameter`) から、共有参照用の characters / clan_battle_bosses を決定論的に生成する基盤です。
+GitHub の `esterTion/redive_master_db_diff` にあるハッシュ化SQLから必要なSQLiteを再構成し、共有参照用の characters / clan_battle_bosses を決定論的に生成する基盤です。
 
-現段階では取得 transport は既存処理を温存し、`generate()` に取得済み SQLite と upstream commit SHA を渡します。revision が同じ場合は重い抽出・生成を行わず `NO_CHANGE` を返します。
+`scripts/update_master_data.py` は実行時に外部DBをダウンロードしません。GitHubのSQLを検証して `.input/master_data_source.db` を生成し、revision が同じ場合は重い抽出・生成を行わず `NO_CHANGE` を返します。SQLの列構成が変わった場合は停止して誤データの公開を防ぎます。
 
 ## 定期更新
 

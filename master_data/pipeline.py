@@ -104,7 +104,17 @@ def extract(db_path: Path, unit_status_path: Path | None = None, now: datetime |
         if release is not None:
             row["release"] = release
         bosses.append(row)
-    characters = [{"id": int(i), "name": UNIT_NAME_JP_OVERRIDES.get(int(i), jp), "name_en": en, "aliases": []} for i, jp, en in units]
+    characters = []
+    for i, jp, en in units:
+        unit_id = int(i)
+        if known_units is not None and unit_id in known_units:
+            jp, en = known_units[unit_id]
+        characters.append({
+            "id": unit_id,
+            "name": UNIT_NAME_JP_OVERRIDES.get(unit_id, jp),
+            "name_en": en,
+            "aliases": [],
+        })
     # 配布対象は開催中の1開催分だけ。未到着なら直近の開催分を維持する。
     if bosses:
         current_month = (now or datetime.now(timezone.utc)).month

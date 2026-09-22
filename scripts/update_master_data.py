@@ -2,10 +2,8 @@ from __future__ import annotations
 
 import json
 import os
-import shutil
 import subprocess
 import sys
-import tempfile
 import urllib.request
 from pathlib import Path
 
@@ -13,7 +11,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 UPSTREAM = ROOT / ".upstream"
 INPUT = ROOT / ".input"
-DB_PATH = INPUT / "roboninon.db"
+DB_PATH = INPUT / "master_data_source.db"
 OUTPUT = ROOT / "dist"
 UNIT_STATUS = Path(
     os.environ.get(
@@ -22,7 +20,9 @@ UNIT_STATUS = Path(
     )
 )
 UPSTREAM_URL = "git@github.com:esterTion/redive_master_db_diff.git"
-DB_URL = "https://roboninon.win/db/download"
+
+sys.path.insert(0, str(ROOT))
+from master_data.source_sql import build_database
 
 
 def run(command: list[str], *, cwd: Path = ROOT) -> None:
@@ -64,19 +64,8 @@ def checkout_upstream() -> None:
     run(["git", "-C", str(UPSTREAM), "reset", "--hard", f"origin/{branch}"])
 
 
-def download_db() -> None:
-    INPUT.mkdir(parents=True, exist_ok=True)
-    descriptor, temporary_name = tempfile.mkstemp(prefix="roboninon.", suffix=".db", dir=INPUT)
-    os.close(descriptor)
-    temporary = Path(temporary_name)
-    try:
-        request = urllib.request.Request(DB_URL, headers={"User-Agent": "priconner-master-data"})
-        with urllib.request.urlopen(request, timeout=120) as response, temporary.open("wb") as output:
-            shutil.copyfileobj(response, output)
-        temporary.replace(DB_PATH)
-    except Exception:
-        temporary.unlink(missing_ok=True)
-        raise
+def build_source_db() -> None:
+    build_database(UPSTREAM, DB_PATH)
 
 
 def sync_google_sheets() -> None:
@@ -118,7 +107,7 @@ def publish_dist() -> None:
 def main() -> int:
     ensure_dist_clean()
     checkout_upstream()
-    download_db()
+    build_source_db()
     # Run the repository tests before generating dist/.  If a scheduled run
     # fails here, the next run must still be able to start.  Generating first
     # leaves dist/ dirty on a test failure, which then makes

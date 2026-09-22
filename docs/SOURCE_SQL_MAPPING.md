@@ -16,7 +16,7 @@ with sqlite3.connect("roboninon.db") as db:
         print(db.execute(f"PRAGMA table_info({table})").fetchall())
 ```
 
-`roboninon.db` は実行時のデータ供給元ではなく、対応表を作るためだけに使用します。
+`roboninon.db` は過去の列対応を確認するための開発時資料であり、実行時のデータ供給元ではありません。実行時はGitHub checkout内の対応SQLを `master_data.source_sql.build_database()` が一時SQLiteへ正規化します。
 
 ## 2. SQL候補を絞る
 
@@ -60,5 +60,6 @@ rg -l "100101|ヒヨリ|401908408|メデューサ" . --glob "*.sql"
 
 - `unit_data`: `v1_ed1b52317ac09b3d790c8feebcfb4fb224b0a1cf16034f167e128f147a09da36.sql`
 - `enemy_parameter`: `v1_7ce15cd873f0e35053e2a1c15111fa91cec7710d5d3ab887d94179e883f46cea.sql`
+- `clan_battle_schedule`: `v1_74bde0aea50434815d2e25b3a60c6596637b9692ef1fabf603685065610b9f98.sql`
 
-これらの固定値は現時点の確認結果として残し、将来の更新では上記の照合手順で再検証します。
+これらの固定値とアンカーIDは `master_data/source_sql.py` で検証します。将来の更新で列位置が変わった場合は例外で停止し、対応表を更新してから再開します。
