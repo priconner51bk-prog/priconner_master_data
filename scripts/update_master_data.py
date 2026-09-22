@@ -113,6 +113,11 @@ def main() -> int:
     ensure_dist_clean()
     checkout_upstream()
     download_db()
+    # Run the repository tests before generating dist/.  If a scheduled run
+    # fails here, the next run must still be able to start.  Generating first
+    # leaves dist/ dirty on a test failure, which then makes
+    # ensure_dist_clean() reject every retry.
+    run([sys.executable, "-m", "pytest", "-q"])
     run(
         [
             sys.executable,
@@ -126,7 +131,6 @@ def main() -> int:
             "--force",
         ]
     )
-    run([sys.executable, "-m", "pytest", "-q"])
     sync_google_sheets()
     publish_dist()
     return 0

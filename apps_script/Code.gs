@@ -99,8 +99,21 @@ function applyGeneratedMasterData(payload) {
 
 function upsertTable_(sheet, incoming) {
   if (!sheet) throw new Error('missing target sheet');
-  var values = sheet.getDataRange().getValues(), headers = headerMap_(values[0]);
+  var values = sheet.getDataRange().getValues();
+  if (!values.length) throw new Error('missing header row');
+  var headers = headerMap_(values[0]);
   if (headers.id === undefined || headers.name === undefined) throw new Error('id/name headers are required');
+
+  // Older sheets were created without the boss HP column.  The generated
+  // master data already contains hp, so add the column before reading rows;
+  // otherwise the value is silently dropped by both sync directions.
+  var hasHp = incoming.some(function(item) { return item.hp !== undefined; });
+  if (hasHp && headers.hp === undefined) {
+    sheet.getRange(1, values[0].length + 1).setValue('hp');
+    values = sheet.getDataRange().getValues();
+    headers = headerMap_(values[0]);
+  }
+
   var rows = values.slice(1), positions = {};
   rows.forEach(function(r, i) { if (r[headers.id] !== '') positions[String(r[headers.id])] = i; });
   incoming.forEach(function(item) {

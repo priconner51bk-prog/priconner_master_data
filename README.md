@@ -8,8 +8,9 @@
 
 GitHub Actions は使用せず、`priconner_clan_battle_task_scheduler` の
 `projects.json` に登録した `scripts/update_master_data.py` から更新します。
-このジョブは upstream checkout、source DB の取得、`dist/` の生成、pytest、
+このジョブは upstream checkout、source DB の取得、pytest、`dist/` の生成、
 Google Sheets 同期、変更がある場合のコミット・push を順に実行します。
+pytest が失敗しても、次回実行を妨げる `dist/` の中途半端な変更を残しません。
 
 更新ジョブは毎月22〜30日のクラバト期間中、登録日の12:20・12:40・13:00
 （日本時間）の3回だけ実行されます。GitHub Actions の workflow は削除済みです。
@@ -25,3 +26,4 @@ Google Sheets 同期を有効にする場合は、scheduler を実行する Wind
 自動コミットを避けるため、更新ジョブは停止します。
 
 `apps_script/Code.gs` は、Google Sheetsの3タブを検証し、GitHub Contents APIへJSONを同期します。`GITHUB_REPO`、`GITHUB_TOKEN`、任意の`GITHUB_PATH`はApps ScriptのScript Propertiesに設定します。aliasは複数IDに一致し得るため、利用側は候補一覧を表示し、1件に暗黙解決しません。
+`clan_battle_bosses` に `hp` 列が無い既存シートでも、GitHub からの同期時に列を自動追加して値を反映します。
