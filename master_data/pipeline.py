@@ -3,6 +3,7 @@ from __future__ import annotations
 import json
 import os
 import sqlite3
+import subprocess
 import tempfile
 import csv
 from datetime import datetime, timezone
@@ -14,6 +15,7 @@ SOURCE = "esterTion/redive_master_db_diff"
 # Known replacement for the legacy DB's mojibake entry. Keep this explicit
 # rather than silently guessing when a Japanese name is not decodable.
 UNIT_NAME_JP_OVERRIDES = {140301: "ティア"}
+WINDOWLESS_SUBPROCESS_FLAGS = getattr(subprocess, "CREATE_NO_WINDOW", 0)
 
 
 class SchemaError(RuntimeError):
@@ -45,11 +47,11 @@ def read_upstream_revision(source_dir: Path) -> dict[str, str]:
     truth_version = truth.read_text(encoding="utf-8-sig").strip()
     if not truth_version:
         raise ValueError(f"empty upstream revision: {truth}")
-    import subprocess
     try:
         commit = subprocess.check_output(
             ["git", "-C", str(source_dir), "rev-parse", "HEAD"],
             text=True, stderr=subprocess.STDOUT,
+            creationflags=WINDOWLESS_SUBPROCESS_FLAGS,
         ).strip()
     except subprocess.CalledProcessError as exc:
         raise RuntimeError(f"upstream is not a readable git checkout: {source_dir}") from exc

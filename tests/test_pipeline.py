@@ -1,10 +1,14 @@
 import sqlite3
+import subprocess
 from pathlib import Path
 
 import pytest
 
 from master_data.pipeline import NO_CHANGE, SchemaError, derive_alias, extract, generate, generate_from_upstream, read_upstream_revision
 from master_data.loader import MasterData, MasterDataError
+
+
+WINDOWLESS_SUBPROCESS_FLAGS = getattr(subprocess, "CREATE_NO_WINDOW", 0)
 
 
 def db(tmp_path: Path) -> Path:
@@ -53,28 +57,26 @@ def test_schema_change_fails_closed(tmp_path):
 
 
 def test_upstream_revision_reads_truth_version_and_commit(tmp_path):
-    import subprocess
     source = tmp_path / "upstream"; source.mkdir()
     (source / "!TruthVersion.txt").write_text("10069600\n", encoding="utf-8")
-    subprocess.run(["git", "-C", str(source), "init", "-q"], check=True)
-    subprocess.run(["git", "-C", str(source), "config", "user.email", "test@example.invalid"], check=True)
-    subprocess.run(["git", "-C", str(source), "config", "user.name", "test"], check=True)
-    subprocess.run(["git", "-C", str(source), "add", "."], check=True)
-    subprocess.run(["git", "-C", str(source), "commit", "-qm", "fixture"], check=True)
+    subprocess.run(["git", "-C", str(source), "init", "-q"], check=True, creationflags=WINDOWLESS_SUBPROCESS_FLAGS)
+    subprocess.run(["git", "-C", str(source), "config", "user.email", "test@example.invalid"], check=True, creationflags=WINDOWLESS_SUBPROCESS_FLAGS)
+    subprocess.run(["git", "-C", str(source), "config", "user.name", "test"], check=True, creationflags=WINDOWLESS_SUBPROCESS_FLAGS)
+    subprocess.run(["git", "-C", str(source), "add", "."], check=True, creationflags=WINDOWLESS_SUBPROCESS_FLAGS)
+    subprocess.run(["git", "-C", str(source), "commit", "-qm", "fixture"], check=True, creationflags=WINDOWLESS_SUBPROCESS_FLAGS)
     revision = read_upstream_revision(source)
     assert revision["truth_version"] == "10069600"
     assert len(revision["source_commit"]) == 40
 
 
 def test_generate_from_upstream_uses_revision_gate(tmp_path):
-    import subprocess
     source = tmp_path / "upstream"; source.mkdir()
     (source / "!TruthVersion.txt").write_text("1\n", encoding="utf-8")
-    subprocess.run(["git", "-C", str(source), "init", "-q"], check=True)
-    subprocess.run(["git", "-C", str(source), "config", "user.email", "test@example.invalid"], check=True)
-    subprocess.run(["git", "-C", str(source), "config", "user.name", "test"], check=True)
-    subprocess.run(["git", "-C", str(source), "add", "."], check=True)
-    subprocess.run(["git", "-C", str(source), "commit", "-qm", "fixture"], check=True)
+    subprocess.run(["git", "-C", str(source), "init", "-q"], check=True, creationflags=WINDOWLESS_SUBPROCESS_FLAGS)
+    subprocess.run(["git", "-C", str(source), "config", "user.email", "test@example.invalid"], check=True, creationflags=WINDOWLESS_SUBPROCESS_FLAGS)
+    subprocess.run(["git", "-C", str(source), "config", "user.name", "test"], check=True, creationflags=WINDOWLESS_SUBPROCESS_FLAGS)
+    subprocess.run(["git", "-C", str(source), "add", "."], check=True, creationflags=WINDOWLESS_SUBPROCESS_FLAGS)
+    subprocess.run(["git", "-C", str(source), "commit", "-qm", "fixture"], check=True, creationflags=WINDOWLESS_SUBPROCESS_FLAGS)
     input_db = db(tmp_path)
     result = generate_from_upstream(source, input_db, tmp_path / "out", "2026-01-01T00:00:00+00:00")
     assert result == "UPDATED"

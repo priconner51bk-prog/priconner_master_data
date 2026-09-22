@@ -22,6 +22,7 @@ UNIT_STATUS = Path(
     )
 )
 UPSTREAM_URL = "git@github-priconner51bk-prog:esterTion/redive_master_db_diff.git"
+WINDOWLESS_SUBPROCESS_FLAGS = getattr(subprocess, "CREATE_NO_WINDOW", 0)
 
 sys.path.insert(0, str(ROOT))
 from master_data.source_sql import build_database
@@ -29,7 +30,12 @@ from master_data.source_sql import build_database
 
 def run(command: list[str], *, cwd: Path = ROOT) -> None:
     print("$", " ".join(command), flush=True)
-    subprocess.run(command, cwd=cwd, check=True)
+    subprocess.run(
+        command,
+        cwd=cwd,
+        check=True,
+        creationflags=WINDOWLESS_SUBPROCESS_FLAGS,
+    )
 
 
 def ensure_dist_clean() -> None:
@@ -37,6 +43,7 @@ def ensure_dist_clean() -> None:
         ["git", "diff", "--quiet", "HEAD", "--", "dist"],
         cwd=ROOT,
         check=False,
+        creationflags=WINDOWLESS_SUBPROCESS_FLAGS,
     )
     if result.returncode != 0:
         raise RuntimeError("dist has pre-existing uncommitted changes; refusing to overwrite or publish it")
@@ -53,6 +60,7 @@ def checkout_upstream() -> None:
         check=True,
         capture_output=True,
         text=True,
+        creationflags=WINDOWLESS_SUBPROCESS_FLAGS,
     )
     if status.stdout.strip():
         raise RuntimeError(f"upstream checkout has local changes: {UPSTREAM}")
@@ -60,6 +68,7 @@ def checkout_upstream() -> None:
     branch = subprocess.check_output(
         ["git", "-C", str(UPSTREAM), "branch", "--show-current"],
         text=True,
+        creationflags=WINDOWLESS_SUBPROCESS_FLAGS,
     ).strip()
     if not branch:
         raise RuntimeError(f"upstream checkout is detached: {UPSTREAM}")
@@ -109,6 +118,7 @@ def publish_dist() -> None:
         ["git", "diff", "--cached", "--quiet", "--", "dist"],
         cwd=ROOT,
         check=False,
+        creationflags=WINDOWLESS_SUBPROCESS_FLAGS,
     )
     if changed.returncode == 0:
         print("dist is unchanged; nothing to publish.")
