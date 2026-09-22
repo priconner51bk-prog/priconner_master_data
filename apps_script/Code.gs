@@ -90,15 +90,19 @@ function updateNameColumn_(book, targetName, sourceName) {
   return {target: targetName, updated: out.length};
 }
 
-// Apply generated upstream results to both sheets without replacing existing rows.
+// Apply generated upstream results. Characters are upserted; boss rows are
+// replaced as a complete five-row set so retired bosses do not remain.
 function applyGeneratedMasterData(payload) {
   var book = SpreadsheetApp.getActiveSpreadsheet();
   upsertTable_(book.getSheetByName('characters'), payload.characters || []);
-  upsertTable_(book.getSheetByName('clan_battle_bosses'), payload.clan_battle_bosses || []);
+  upsertTable_(book.getSheetByName('clan_battle_bosses'), payload.clan_battle_bosses || [], true);
 }
 
-function upsertTable_(sheet, incoming) {
+function upsertTable_(sheet, incoming, replaceAll) {
   if (!sheet) throw new Error('missing target sheet');
+  if (replaceAll && incoming.length !== 5) {
+    throw new Error('clan_battle_bosses payload must contain exactly 5 rows');
+  }
   var values = sheet.getDataRange().getValues();
   if (!values.length) throw new Error('missing header row');
   var headers = headerMap_(values[0]);
@@ -114,6 +118,19 @@ function upsertTable_(sheet, incoming) {
     headers = headerMap_(values[0]);
   }
 
+  if (replaceAll) {
+    var replacementRows = incoming.map(function(item) {
+      return rowFromItem_(item, values[0].length, headers);
+    });
+    replacementRows.sort(function(a, b) {
+      return Number(a[headers.id]) - Number(b[headers.id]);
+    });
+    var rowsToClear = Math.max(values.length - 1, replacementRows.length);
+    if (rowsToClear) sheet.getRange(2, 1, rowsToClear, values[0].length).clearContent();
+    sheet.getRange(2, 1, replacementRows.length, values[0].length).setValues(replacementRows);
+    return;
+  }
+
   var rows = values.slice(1), positions = {};
   rows.forEach(function(r, i) { if (r[headers.id] !== '') positions[String(r[headers.id])] = i; });
   incoming.forEach(function(item) {
@@ -125,12 +142,7 @@ function upsertTable_(sheet, incoming) {
       if (headers.release !== undefined && item.release !== undefined) rows[index][headers.release] = String(item.release || '');
       return;
     }
-    var row = new Array(values[0].length).fill('');
-    row[headers.id] = Number(item.id); row[headers.name] = String(item.name || '');
-    if (headers.name_en !== undefined) row[headers.name_en] = String(item.name_en || '');
-    if (headers.hp !== undefined && item.hp !== undefined) row[headers.hp] = Number(item.hp);
-    if (headers.release !== undefined) row[headers.release] = String(item.release || '');
-    if (headers.aliases !== undefined) row[headers.aliases] = JSON.stringify(item.aliases || []);
+    var row = rowFromItem_(item, values[0].length, headers);
     rows.push(row); positions[key] = rows.length - 1;
   });
   // Keep restored and updated rows in deterministic ID order.
@@ -138,6 +150,16 @@ function upsertTable_(sheet, incoming) {
     return Number(a[headers.id]) - Number(b[headers.id]);
   });
   if (rows.length) sheet.getRange(2, 1, rows.length, values[0].length).setValues(rows);
+}
+
+function rowFromItem_(item, width, headers) {
+  var row = new Array(width).fill('');
+  row[headers.id] = Number(item.id); row[headers.name] = String(item.name || '');
+  if (headers.name_en !== undefined) row[headers.name_en] = String(item.name_en || '');
+  if (headers.hp !== undefined && item.hp !== undefined) row[headers.hp] = Number(item.hp);
+  if (headers.release !== undefined) row[headers.release] = String(item.release || '');
+  if (headers.aliases !== undefined) row[headers.aliases] = JSON.stringify(item.aliases || []);
+  return row;
 }
 
 function headerMap_(headers) {
