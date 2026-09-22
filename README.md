@@ -16,7 +16,7 @@ pytest が失敗しても、次回実行を妨げる `dist/` の中途半端な�
 （日本時間）の3回だけ実行されます。GitHub Actions の workflow は削除済みです。
 
 GitHub の `origin` は HTTPS ではなく、SSH
-(`git@github.com:priconner51bk-prog/priconner_master_data.git`) を使用します。
+(`git@github-priconner51bk-prog:priconner51bk-prog/priconner_master_data.git`) を使用します。
 
 Google Sheets 同期を有効にする場合は、scheduler を実行する Windows ユーザーの
 環境変数 `APPS_SCRIPT_WEBHOOK_URL` と `APPS_SCRIPT_WEBHOOK_TOKEN` を設定します。

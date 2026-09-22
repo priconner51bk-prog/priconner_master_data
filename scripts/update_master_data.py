@@ -21,7 +21,7 @@ UNIT_STATUS = Path(
         str(ROOT.parent / "priconner_data_tool" / "priconner_data" / "UnitStatus.csv"),
     )
 )
-UPSTREAM_URL = "git@github.com:esterTion/redive_master_db_diff.git"
+UPSTREAM_URL = "git@github-priconner51bk-prog:esterTion/redive_master_db_diff.git"
 
 sys.path.insert(0, str(ROOT))
 from master_data.source_sql import build_database
