@@ -4,6 +4,8 @@ import json
 import os
 import subprocess
 import sys
+import time
+import urllib.error
 import urllib.request
 from pathlib import Path
 
@@ -83,11 +85,22 @@ def sync_google_sheets() -> None:
         headers={"Content-Type": "application/json"},
         method="POST",
     )
-    with urllib.request.urlopen(request, timeout=60) as response:
-        result = json.loads(response.read().decode("utf-8"))
-    if not result.get("ok"):
-        raise RuntimeError(result)
-    print(result)
+    last_error: Exception | None = None
+    for attempt in range(3):
+        try:
+            with urllib.request.urlopen(request, timeout=60) as response:
+                result = json.loads(response.read().decode("utf-8"))
+            if not isinstance(result, dict) or not result.get("ok"):
+                raise RuntimeError(result)
+            print(result)
+            return
+        except (urllib.error.HTTPError, urllib.error.URLError, json.JSONDecodeError, RuntimeError, TimeoutError) as exc:
+            last_error = exc
+            if attempt == 2:
+                raise RuntimeError("Google Sheets webhook failed after 3 attempts") from exc
+            print(f"Google Sheets webhook attempt {attempt + 1} failed; retrying.", flush=True)
+            time.sleep(2 ** attempt)
+    raise RuntimeError("Google Sheets webhook failed") from last_error
 
 
 def publish_dist() -> None:
