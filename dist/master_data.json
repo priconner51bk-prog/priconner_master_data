@@ -902,7 +902,7 @@
       ],
       "id": 112001,
       "name": "キャル（ニューイヤー）",
-      "name_en": "Kyaru (New Year)"
+      "name_en": "NYKyaru"
     },
     {
       "aliases": [
@@ -2982,7 +2982,7 @@
       ],
       "id": 140401,
       "name": "リーザ",
-      "name_en": "リーザ"
+      "name_en": "Liza"
     },
     {
       "aliases": [
@@ -2990,7 +2990,7 @@
       ],
       "id": 140501,
       "name": "ヴルム（ヴァルムドラッヘ）",
-      "name_en": "ヴルム（ヴァルムドラッヘ）"
+      "name_en": "Wurm (Warmdrache)"
     },
     {
       "aliases": [
@@ -2998,7 +2998,63 @@
       ],
       "id": 140601,
       "name": "クローチェ（サブマリン）",
-      "name_en": "クローチェ（サブマリン）"
+      "name_en": "Croce (Submarine)"
+    },
+    {
+      "aliases": [
+        "サレン"
+      ],
+      "id": 140701,
+      "name": "サレン（ガンナー）",
+      "name_en": "Saren (Gunner)"
+    },
+    {
+      "aliases": [
+        "アメス"
+      ],
+      "id": 140801,
+      "name": "アメス（ガンナー）",
+      "name_en": "Ameth (Gunner)"
+    },
+    {
+      "aliases": [
+        "アグライア"
+      ],
+      "id": 140901,
+      "name": "アグライア",
+      "name_en": "Aglaia"
+    },
+    {
+      "aliases": [
+        "ゴールドシップ"
+      ],
+      "id": 141001,
+      "name": "ゴールドシップ",
+      "name_en": "ゴールドシップ"
+    },
+    {
+      "aliases": [
+        "アーモンドアイ"
+      ],
+      "id": 141101,
+      "name": "アーモンドアイ",
+      "name_en": "アーモンドアイ"
+    },
+    {
+      "aliases": [
+        "ラッキーライラック"
+      ],
+      "id": 141201,
+      "name": "ラッキーライラック",
+      "name_en": "ラッキーライラック"
+    },
+    {
+      "aliases": [
+        "デアリングタクト"
+      ],
+      "id": 141301,
+      "name": "デアリングタクト",
+      "name_en": "デアリングタクト"
     },
     {
       "aliases": [
@@ -3023,6 +3079,14 @@
       "id": 141601,
       "name": "グレイス（バニー）",
       "name_en": "グレイス（バニー）"
+    },
+    {
+      "aliases": [
+        "ルイズマリー"
+      ],
+      "id": 143001,
+      "name": "ルイズマリー",
+      "name_en": "ルイズマリー"
     },
     {
       "aliases": [
@@ -3132,57 +3196,58 @@
   "clan_battle_bosses": [
     {
       "aliases": [
-        "フロストハウンド"
+        "グレーターゴーレム"
       ],
       "hp": 2080000000,
-      "id": 401909401,
-      "name": "フロストハウンド",
-      "name_en": "Frost Hound",
-      "release": 202609
+      "id": 401910401,
+      "name": "グレーターゴーレム",
+      "name_en": "グレーターゴーレム",
+      "release": 202610
     },
     {
       "aliases": [
-        "ランドスロース"
+        "ターボファング"
       ],
       "hp": 2120000000,
-      "id": 401909405,
-      "name": "ランドスロース",
-      "name_en": "Land Sloth",
-      "release": 202609
+      "id": 401910402,
+      "name": "ターボファング",
+      "name_en": "ターボファング",
+      "release": 202610
     },
     {
       "aliases": [
-        "ジャッカルシーフ"
+        "マダムプリズム"
       ],
       "hp": 2160000000,
-      "id": 401909406,
-      "name": "ジャッカルシーフ",
-      "name_en": "Jackal Thief",
-      "release": 202609
+      "id": 401910403,
+      "name": "マダムプリズム",
+      "name_en": "マダムプリズム",
+      "release": 202610
     },
     {
       "aliases": [
-        "ダークガーゴイル"
+        "アーク・デアム"
       ],
       "hp": 2200000000,
-      "id": 401909407,
-      "name": "ダークガーゴイル",
-      "name_en": "Dark Gargoyle",
-      "release": 202609
+      "id": 401910404,
+      "name": "アーク・デアム",
+      "name_en": "アーク・デアム",
+      "release": 202610
     },
     {
       "aliases": [
-        "グラットン"
+        "レサトパルト"
       ],
       "hp": 2240000000,
-      "id": 401909408,
-      "name": "グラットン",
-      "name_en": "Glutton",
-      "release": 202609
+      "id": 401910408,
+      "name": "レサトパルト",
+      "name_en": "レサトパルト",
+      "release": 202610
     }
   ],
-  "generated_at": "2026-09-22T04:58:47.500672+00:00",
+  "content_hash": "540fe4d7d0bbd902575619d7f0a2eef17d5a2cd29f90c4edb478163613627f5c",
+  "generated_at": "2026-11-22T03:50:28.129009+00:00",
   "schema_version": "1",
-  "source": "esterTion/redive_master_db_diff",
-  "source_commit": "8f7e13d88a5a6236dfdb012c82a82948796290e3"
+  "source": "redive.estertion.win/db/redive_jp.db + esterTion/redive_master_db_diff (clan battle schedule)",
+  "source_commit": "38d45102d0929199a1939fcdaf310f86b306bc0722fe015a65bc1bd25df48dd4"
 }

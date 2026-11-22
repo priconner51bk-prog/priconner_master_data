@@ -1,6 +1,7 @@
 {
-  "generated_at": "2026-09-22T04:58:47.500672+00:00",
+  "content_hash": "540fe4d7d0bbd902575619d7f0a2eef17d5a2cd29f90c4edb478163613627f5c",
+  "generated_at": "2026-11-22T03:50:28.129009+00:00",
   "schema_version": "1",
-  "source": "esterTion/redive_master_db_diff",
-  "source_commit": "8f7e13d88a5a6236dfdb012c82a82948796290e3"
+  "source": "redive.estertion.win/db/redive_jp.db + esterTion/redive_master_db_diff (clan battle schedule)",
+  "source_commit": "38d45102d0929199a1939fcdaf310f86b306bc0722fe015a65bc1bd25df48dd4"
 }
