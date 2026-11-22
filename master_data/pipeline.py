@@ -6,6 +6,7 @@ import sqlite3
 import subprocess
 import tempfile
 import csv
+import hashlib
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -125,13 +126,12 @@ def extract(db_path: Path, unit_status_path: Path | None = None, now: datetime |
         complete = [m for m, count in counts.items() if count >= 5 and m <= current_month]
         target_month = max(complete) if complete else (current_month if current_month in counts else max(months))
         bosses = [row for row, month in zip(bosses, months) if month == target_month]
-    clan_battle_bosses = [{**row, "aliases": []} for row in bosses]
+    clan_battle_bosses = [{**row, "aliases": ["\u30dc\u30b9"]} for row in bosses]
     if strict_boss_count and len(clan_battle_bosses) != 5:
         raise SchemaError(
             f"incomplete clan battle boss set: expected 5, got {len(clan_battle_bosses)}"
         )
     apply_dynamic_aliases(characters)
-    apply_dynamic_aliases(clan_battle_bosses)
     _validate(characters, "characters")
     _validate(clan_battle_bosses, "clan_battle_bosses")
     return {"characters": characters, "clan_battle_bosses": clan_battle_bosses}
@@ -149,27 +149,16 @@ def _validate(rows: list[dict], kind: str) -> None:
             aliases.setdefault(alias, row["id"])
 
 
-def generate(db_path: Path, output_dir: Path, source_commit: str, now: str | None = None,
-             unit_status_path: Path | None = None, force: bool = False) -> str:
-    output_dir.mkdir(parents=True, exist_ok=True)
-    meta_path = output_dir / "metadata.json"
-    if meta_path.exists():
-        old = json.loads(meta_path.read_text(encoding="utf-8"))
-        if not force and old.get("source_commit") == source_commit:
-            return NO_CHANGE
-    data = extract(db_path, unit_status_path=unit_status_path)
-    metadata = {"schema_version": SCHEMA_VERSION, "source": SOURCE,
-                "source_commit": source_commit,
-                "generated_at": now or datetime.now(timezone.utc).isoformat()}
-    payload = {**metadata, **data}
-    _atomic_json(output_dir / "master_data.json", payload)
+def write_published_csvs(data: dict, output_dir: Path) -> None:
+    """Write public CSVs without changing JSON rows or their English names."""
     for kind, rows in data.items():
         path = output_dir / f"{kind}.csv"
         fd, tmp = tempfile.mkstemp(dir=output_dir, prefix=f".{kind}.", suffix=".tmp", text=True)
         try:
             with os.fdopen(fd, "w", encoding="utf-8", newline="") as f:
                 fieldnames = ["id", "name"]
-                if any("name_en" in row for row in rows):
+                omit_english_name = kind in {"characters", "clan_battle_bosses"}
+                if not omit_english_name and any("name_en" in row for row in rows):
                     fieldnames.append("name_en")
                 if any("hp" in row for row in rows):
                     fieldnames.append("hp")
@@ -179,10 +168,50 @@ def generate(db_path: Path, output_dir: Path, source_commit: str, now: str | Non
                 writer = csv.DictWriter(f, fieldnames=fieldnames)
                 writer.writeheader()
                 for row in rows:
-                    writer.writerow({**row, "aliases": json.dumps(row["aliases"], ensure_ascii=False, separators=(",", ":"))})
+                    values = {**row, "aliases": json.dumps(row["aliases"], ensure_ascii=False, separators=(",", ":"))}
+                    if omit_english_name:
+                        values.pop("name_en", None)
+                    writer.writerow(values)
             os.replace(tmp, path)
         finally:
             if os.path.exists(tmp): os.unlink(tmp)
+
+
+def _publication_current(output_dir: Path) -> bool:
+    try:
+        for kind in ("characters", "clan_battle_bosses"):
+            with (output_dir / f"{kind}.csv").open(encoding="utf-8", newline="") as stream:
+                names = next(csv.reader(stream), [])
+                if "name_en" in names or not {"id", "name", "aliases"} <= set(names):
+                    return False
+        payload = json.loads((output_dir / "master_data.json").read_text(encoding="utf-8"))
+        return all(row["aliases"] == ["\u30dc\u30b9"] for row in payload["clan_battle_bosses"])
+    except (OSError, KeyError, TypeError, ValueError, csv.Error):
+        return False
+
+
+def _content_hash(data: dict, source_metadata: dict) -> str:
+    raw = json.dumps({**source_metadata, **data}, ensure_ascii=False,
+                     sort_keys=True, separators=(",", ":"))
+    return hashlib.sha256(raw.encode("utf-8")).hexdigest()
+
+
+def generate(db_path: Path, output_dir: Path, source_commit: str, now: str | None = None,
+             unit_status_path: Path | None = None, force: bool = False) -> str:
+    output_dir.mkdir(parents=True, exist_ok=True)
+    meta_path = output_dir / "metadata.json"
+    if meta_path.exists():
+        old = json.loads(meta_path.read_text(encoding="utf-8"))
+        if not force and old.get("source_commit") == source_commit and _publication_current(output_dir):
+            return NO_CHANGE
+    data = extract(db_path, unit_status_path=unit_status_path)
+    source_metadata = {"schema_version": SCHEMA_VERSION, "source": SOURCE,
+                       "source_commit": source_commit}
+    metadata = {**source_metadata, "content_hash": _content_hash(data, source_metadata),
+                "generated_at": now or datetime.now(timezone.utc).isoformat()}
+    payload = {**metadata, **data}
+    _atomic_json(output_dir / "master_data.json", payload)
+    write_published_csvs(data, output_dir)
     _atomic_json(meta_path, metadata)
     return "UPDATED"
 
@@ -191,7 +220,7 @@ def generate_from_upstream(source_dir: Path, db_path: Path, output_dir: Path,
                            now: str | None = None,
                            unit_status_path: Path | None = None,
                            force: bool = False) -> str:
-    """Use upstream checkout identity as the only update gate for generation."""
+    """Read the source revision before checking the published schema."""
     revision = read_upstream_revision(source_dir)
     return generate(db_path, output_dir, revision["source_commit"], now=now,
                     unit_status_path=unit_status_path, force=force)

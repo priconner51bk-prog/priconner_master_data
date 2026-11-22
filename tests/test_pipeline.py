@@ -1,3 +1,5 @@
+import csv
+import json
 import sqlite3
 import subprocess
 from pathlib import Path
@@ -31,6 +33,50 @@ def test_extract_and_deterministic_revision(tmp_path):
     first = (out / "master_data.json").read_bytes()
     assert generate(p, out, "abc", "2099-01-01T00:00:00+00:00") == NO_CHANGE
     assert (out / "master_data.json").read_bytes() == first
+
+
+def test_public_csv_omits_english_names_but_keeps_json_and_remaining_fields(tmp_path):
+    out = tmp_path / "out"
+    unit_status = tmp_path / "UnitStatus.csv"
+    unit_status.write_text("unit_id,unit_name_jp,unit_name\n300001,Confirmed,Boss Unit\n", encoding="utf-8")
+    generate(db(tmp_path), out, "abc", unit_status_path=unit_status)
+    payload = json.loads((out / "master_data.json").read_text(encoding="utf-8"))
+    for kind, expected_header in (
+        ("characters", ["id", "name", "aliases"]),
+        ("clan_battle_bosses", ["id", "name", "hp", "aliases"]),
+    ):
+        with (out / (kind + ".csv")).open(encoding="utf-8", newline="") as stream:
+            reader = csv.DictReader(stream)
+            assert reader.fieldnames == expected_header
+            rows = list(reader)
+        assert len(rows) == len(payload[kind]) > 0
+        assert any(source.get("name_en") for source in payload[kind])
+        for row, source in zip(rows, payload[kind]):
+            assert row == {
+                key: json.dumps(source[key], ensure_ascii=False, separators=(",", ":"))
+                if key == "aliases" else str(source[key])
+                for key in expected_header
+            }
+
+
+def test_same_source_repairs_legacy_csv_header(tmp_path):
+    out = tmp_path / "out"
+    source = db(tmp_path)
+    generate(source, out, "abc")
+    characters = out / "characters.csv"
+    characters.write_text("id,name,name_en,aliases\n", encoding="utf-8")
+    assert generate(source, out, "abc") == "UPDATED"
+    assert characters.read_text(encoding="utf-8").splitlines()[0] == "id,name,aliases"
+    assert generate(source, out, "abc") == NO_CHANGE
+
+
+def test_boss_uses_stable_display_alias_not_formal_name(tmp_path):
+    source = db(tmp_path)
+    with sqlite3.connect(source) as conn:
+        conn.execute("UPDATE enemy_parameter SET name_jp = ?", ("Distinct boss name",))
+    boss = extract(source)["clan_battle_bosses"][0]
+    assert boss["name"] == "Distinct boss name"
+    assert boss["aliases"] == ["\u30dc\u30b9"]
 
 
 def test_bosses_apply_legacy_gui_filters(tmp_path):

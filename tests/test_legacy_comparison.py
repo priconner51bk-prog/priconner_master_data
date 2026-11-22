@@ -34,6 +34,6 @@ def test_boss_output_matches_legacy_gui_selection(tmp_path):
         {key: row[key] for key in ("id", "name", "hp", "aliases")}
         for row in actual
     ]
-    assert comparable == legacy
+    assert [{**row, "aliases": ["\u30dc\u30b9"]} for row in legacy] == comparable
     assert all(row.get("name_en") for row in actual)
     assert all(row.get("release") for row in actual)
